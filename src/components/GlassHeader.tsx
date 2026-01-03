@@ -1,18 +1,21 @@
-import ThemeToggle from "./ui/theme-toggle";
 import { personalInfo } from "@/lib/data";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import type { Variants } from "framer-motion";
+import ThemeToggle from "./ui/theme-toggle";
+import { useTranslations } from "@/i18n/utils"; // Ne pas oublier l'import !
 
-export default function GlassHeader() {
+export default function GlassHeader({ lang }: { lang: "fr" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations(lang);
 
-  const blurVariant = {
-    hidden: { opacity: 0, filter: "blur(10px)" },
+  const blurVariant: Variants = {
+    hidden: { opacity: 0, filter: "blur(8px)" },
     visible: (i: number) => ({
       opacity: 1,
       filter: "blur(0px)",
-      transition: { delay: i * 0.1, duration: 0.5 },
+      transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
     }),
   };
 
@@ -20,71 +23,68 @@ export default function GlassHeader() {
     <header className="fixed top-4 w-full z-50 px-4">
       <nav className="max-w-4xl mx-auto backdrop-blur-xl bg-background/60 border border-border/40 rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-black/5">
         <motion.a
-          className="text-sm font-semibold tracking-tight uppercase"
-          href="/"
+          href={lang === "fr" ? "/" : "/en/"}
+          className="text-sm font-bold tracking-tighter uppercase"
           initial="hidden"
           animate="visible"
           variants={blurVariant}
+          custom={0}
         >
           {personalInfo.name}
         </motion.a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {["experience", "skills", "projects", "awards", "education"].map(
-            (item, i) => (
-              <motion.a
-                key={item}
-                href={`#${item}`}
-                className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
-                custom={i}
-                initial="hidden"
-                animate="visible"
-                variants={blurVariant}
-              >
-                {item}
-              </motion.a>
-            )
-          )}
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6">
+          {["experience", "projects", "skills"].map((item, i) => (
+            <motion.a
+              key={item}
+              href={`#${item}`}
+              className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+              initial="hidden"
+              animate="visible"
+              variants={blurVariant}
+              custom={i + 1}
+            >
+              {t(`nav.${item}` as any)}
+            </motion.a>
+          ))}
         </div>
 
         <div className="flex items-center gap-4">
+          {/* Sélecteur de langue */}
+          <div className="flex gap-3 border-r border-border/40 pr-4 mr-1">
+            <a
+              href="/"
+              className={`text-[10px] font-bold ${
+                lang === "fr" ? "text-foreground" : "text-muted-foreground/40"
+              }`}
+            >
+              FR
+            </a>
+            <a
+              href="/en/"
+              className={`text-[10px] font-bold ${
+                lang === "en" ? "text-foreground" : "text-muted-foreground/40"
+              }`}
+            >
+              EN
+            </a>
+          </div>
+
           <ThemeToggle />
+
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? (
+              <X size={18} strokeWidth={1.5} />
+            ) : (
+              <Menu size={18} strokeWidth={1.5} />
+            )}
           </button>
         </div>
       </nav>
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="absolute top-20 left-4 right-4 p-6 rounded-3xl backdrop-blur-2xl bg-background/90 border border-border/40 md:hidden"
-            initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            exit={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-          >
-            <div className="flex flex-col gap-6 items-center">
-              {["experience", "skills", "projects", "awards", "education"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href={`#${item}`}
-                    className="text-sm uppercase tracking-widest"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                )
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
   );
 }

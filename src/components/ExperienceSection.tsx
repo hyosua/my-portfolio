@@ -3,8 +3,10 @@ import TimelineItem from "./TimelineItem";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useTranslations } from "@/i18n/utils";
 
-export default function ExperienceSection() {
+export default function ExperienceSection({ lang }: { lang: "fr" | "en" }) {
+  const t = useTranslations(lang);
   // Définition des variantes pour l'effet de flou
   const blurIn: Variants = {
     hidden: { opacity: 0, filter: "blur(12px)" },
@@ -36,7 +38,7 @@ export default function ExperienceSection() {
             className="text-3xl font-bold tracking-tighter mb-12 text-center md:text-left uppercase"
             variants={blurIn}
           >
-            Work Experience
+            {t("section.experience")}
           </motion.h2>
 
           <div className="space-y-12">
@@ -60,7 +62,7 @@ export default function ExperienceSection() {
                         strokeWidth={1.5}
                       />
                       <h4 className="text-xs uppercase tracking-widest font-semibold text-muted-foreground">
-                        Key Achievements
+                        {t("experience.achievements")}
                       </h4>
                     </div>
 

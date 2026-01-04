@@ -1,17 +1,22 @@
 ---
 import "../styles/global.css";
+import { getLangFromUrl } from "@/i18n/utils";
 
 interface Props {
   title?: string;
   description?: string;
+  lang?: "fr" | "en";
 }
 
-const { title = "Rishikesh S - Portfolio", description = "My Portfolio" } =
-  Astro.props;
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+const {
+  title = "Hyosua Colléter - Portfolio",
+  description = "Mon Portfolio de Développeur Fullstack",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

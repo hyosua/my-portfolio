@@ -2,8 +2,11 @@ import { personalInfo } from "@/lib/data";
 import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useTranslations } from "@/i18n/utils";
 
-export default function HeroSection() {
+export default function HeroSection({ lang }: { lang: "fr" | "en" }) {
+  const t = useTranslations(lang);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,7 +45,7 @@ export default function HeroSection() {
               className="text-lg text-muted-foreground font-light tracking-wide mb-8"
               variants={blurIn}
             >
-              Software Engineer
+              {t("hero.role")}
             </motion.p>
 
             <motion.div
@@ -69,9 +72,6 @@ export default function HeroSection() {
               >
                 <Linkedin size={16} strokeWidth={1.5} /> LinkedIn
               </a>
-              <span className="text-muted-foreground flex items-center gap-2 text-sm">
-                <MapPin size={16} strokeWidth={1.5} /> {personalInfo.location}
-              </span>
             </motion.div>
           </div>
 
@@ -83,6 +83,16 @@ export default function HeroSection() {
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-border"
             />
           </motion.div>
+        </motion.div>
+        <motion.div
+          className="mt-16 pt-16 border-t border-border/40"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          animate={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <p className="text-lg leading-relaxed text-muted-foreground max-w-2xl font-light">
+            {personalInfo.heroDescription}
+          </p>
         </motion.div>
       </div>
     </section>

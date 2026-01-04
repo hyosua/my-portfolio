@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import GlassHeader from "@/components/GlassHeader";
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import AwardsSection from "@/components/AwardsSection";
+import EducationSection from "@/components/EducationSection";
+import Footer from "@/components/Footer";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+// indique à Astro de générer "/" (fr) et "/en" (en)
+export function getStaticPaths() {
+  return [
+    { params: { lang: undefined } }, // racine (fr)
+    { params: { lang: "en" } }, // anglais
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang} description={t("head.description")}>
+  <GlassHeader client:load lang={lang} />
+  <main class="min-h-screen">
+    <HeroSection client:load lang={lang} />
+    <ExperienceSection client:load lang={lang} />
+    <SkillsSection client:load />
+    <ProjectsSection client:load />
+    <EducationSection client:load />
+  </main>
+  <Footer client:load />
+</Layout>

@@ -1,12 +1,11 @@
 export const personalInfo = {
-  name: "Lorem Ipsum",
-  location: "Dolor Sit Amet",
-  email: "lorem@ipsum.com",
-  github: "https://github.com/loremipsum",
-  linkedin: "https://linkedin.com/in/loremipsum",
+  name: "Hyosua Colléter",
+  email: "colleterhyosua@gmail.com",
+  github: "https://github.com/hyosua",
+  linkedin: "https://linkedin.com/in/hyosua",
   profilePicture: "/profile.jpeg",
   heroDescription:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Ancien facteur reconverti par passion, j'ai gardé une obsession : la satisfaction de l'utilisateur final. Pour moi, un projet réussi se gère comme une tournée : une préparation millimétrée pour une exécution sans faille. Je prends du plaisir à concevoir des applications web qui soient à la fois performantes et intuitives pour les utilisateurs.",
 };
 
 export const workExperience = [

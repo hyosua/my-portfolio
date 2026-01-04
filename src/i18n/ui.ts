@@ -7,6 +7,8 @@ export const defaultLang = 'fr';
 
 export const ui = {
   fr: {
+    // Head
+    'head.description': 'Développeur full-stack passionné. Mes technos favorites: JavaScript(React, Typescript, Nextjs,Nodejs), Python, Mongodb, socket-io, postgresql...',
     // Navigation
     'nav.experience': 'Expérience',
     'nav.projects': 'Projets',
@@ -22,12 +24,15 @@ export const ui = {
     
     // Labels spécifiques
     'experience.achievements': 'Réalisations Clés',
-    'hero.role': 'Ingénieur Logiciel',
+    'hero.role': 'Développeur Full Stack',
     'contact.email': 'Email',
     'contact.github': 'GitHub',
     'contact.linkedin': 'LinkedIn',
   },
   en: {
+    // Head
+    'head.description': 'Passionate full-stack developer. My favorite technologies: JavaScript (React, Typescript, Next.js, Node.js), Python, MongoDB, socket-io, PostgreSQL...',
+
     // Navigation
     'nav.experience': 'Experience',
     'nav.projects': 'Projects',
@@ -43,7 +48,7 @@ export const ui = {
     
     // Specific Labels
     'experience.achievements': 'Key Achievements',
-    'hero.role': 'Software Engineer',
+    'hero.role': 'Fulll Stack Developer',
     'contact.email': 'Email',
     'contact.github': 'GitHub',
     'contact.linkedin': 'LinkedIn',

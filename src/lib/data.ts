@@ -10,48 +10,51 @@ export const personalInfo = {
 
 export const workExperience = [
   {
-    company: "Lorem Ipsum Corp",
-    location: "Lorem City",
-    position: "Lorem Engineer",
-    period: "Jan 2020 - Present",
+    company: "La Poste",
+    location: "Yerres (91)",
+    position: "Facteur Service Expert",
+    period: "2026 - Présent",
     achievements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-      "Excepteur sint occaecat cupidatat non proident.",
-      "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
+      "Optimisation des tournées (casiers, plans de piquage, Points de Distribution)",
+      "Mise à jour du système informatisé lors de la réorganisation du bureau de Lanmeur (29) en 2022",
+      "Remplacement régulier des Responsables Opérationnels",
+      "Maîtrise des logiciels et applications intranet",
+      "Tri, préparation et distribution de courrier/colis sur plus de 40 tournées",
+      "Services aux particuliers (Identité Numérique, Veillez Sur Mes Parents, Réclamations)",
     ],
   },
   {
-    company: "Dolor Sit Amet",
-    location: "Ipsumville",
-    position: "Software Developer",
-    period: "Feb 2019 - Jan 2020",
+    company: "Aximum (Groupe COLAS)",
+    location: "Lannion (22)",
+    position: "Développeur (Stagiaire)",
+    period: "Mar 2015 - Juin 2015",
     achievements: [
-      "Morbi in sem quis dui placerat ornare.",
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.",
+      "Ajouts de fonctionnalités d'export de données au logiciel SYMART",
+      "Étude des besoins",
+      "Intégration dans le SVN",
+      "Documentation technique et guide utilisateur",
     ],
   },
   {
-    company: "Consectetur Inc.",
-    location: "Adipiscing, Ipsum",
-    position: "Intern",
-    period: "Jun 2018 - Feb 2019",
+    company: "Teraqua",
+    location: "St-Martin-des-Champs (29)",
+    position: "Développeur (Stagiaire)",
+    period: "Avr 2014 - Juin 2014",
     achievements: [
-      "Praesent dapibus, neque id cursus faucibus.",
-      "Fusce feugiat malesuada odio.",
+      "Développement d'une interface d'administration d'automates industriels",
+      "Création de scripts shell pour le paramétrage",
+      "Création d'une interface de paramétrage réseau",
+      "Création d'une fonctionnalité de mise-à-jour"
     ],
   },
 ];
 
 export const education = [
   {
-    institution: "Lorem Ipsum University",
-    location: "Lorem City",
-    degree: "BSc Lorem Ipsum",
-    period: "2015 - 2019",
+    institution: "Licence Professionnelle MIAW (Métiers de l'Informatique Application Web)",
+    location: "Evry (91)",
+    degree: "LP MIAW",
+    period: "2025 - Présent",
     achievements: [
       "President of Lorem Ipsum Club",
       "Organized multiple lorem events",

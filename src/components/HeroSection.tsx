@@ -26,7 +26,7 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   };
 
   return (
-    <section className="pt-32 pb-16 md:pt-48 md:pb-24">
+    <section id="hero" className="pt-32 pb-16 md:pt-48 md:pb-24">
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div
           className="flex flex-col md:flex-row items-center md:items-end justify-between gap-12"

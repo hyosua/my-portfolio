@@ -47,7 +47,7 @@ export default function ProjectsSection({
                 </CardHeader>
                 <CardContent className="flex-1">
                   <CardDescription className="text-sm text-muted-foreground">
-                    <p>{t(project.description[0] as any)}</p>
+                    {t(project.description[0] as any)}
                   </CardDescription>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags.map((tag: string) => (

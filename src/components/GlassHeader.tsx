@@ -48,7 +48,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
               >
                 {t(`nav.${item}` as any)}
               </motion.a>
-            )
+            ),
           )}
         </div>
 

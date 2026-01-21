@@ -1,5 +1,6 @@
 import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
+import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
@@ -72,6 +73,19 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
               >
                 <Linkedin size={16} strokeWidth={1.5} /> LinkedIn
               </a>
+              <Button
+                asChild
+                variant="secondary"
+                className="hover:scale-105 transition-transform duration-300"
+              >
+                <a
+                  href={personalInfo.cvPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("hero.downloadCv")}
+                </a>
+              </Button>
             </motion.div>
           </div>
 

@@ -35,19 +35,21 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
-          {["experience", "skills", "projects", "education"].map((item, i) => (
-            <motion.a
-              key={item}
-              href={`#${item}`}
-              className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
-              initial="hidden"
-              animate="visible"
-              variants={blurVariant}
-              custom={i + 1}
-            >
-              {t(`nav.${item}` as any)}
-            </motion.a>
-          ))}
+          {["experience", "skills", "projects", "education", "contact"].map(
+            (item, i) => (
+              <motion.a
+                key={item}
+                href={`#${item}`}
+                className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+                initial="hidden"
+                animate="visible"
+                variants={blurVariant}
+                custom={i + 1}
+              >
+                {t(`nav.${item}` as any)}
+              </motion.a>
+            )
+          )}
         </div>
 
         <div className="flex items-center gap-4">

@@ -5,6 +5,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/hyosua",
   profilePicture: "/profile.jpeg",
   heroDescription: "hero.description",
+  cvPath: "/cv-colleter.pdf",
 };
 
 export const workExperience = [

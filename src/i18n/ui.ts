@@ -16,6 +16,7 @@ export const ui = {
     "nav.skills": "Compétences",
     "nav.awards": "Distinctions",
     "nav.education": "Formation",
+    "nav.contact": "Contact",
 
     // Titres de sections
     "section.experience": "Parcours Professionnel",
@@ -23,13 +24,20 @@ export const ui = {
     "section.skills": "Compétences",
     "section.education": "Cursus Académique",
     "section.awards": "Prix et distinctions",
+    "section.contact": "Contact",
 
     // Labels spécifiques
     "experience.achievements": "Réalisations Clés",
     "hero.description":
       "Ancien facteur reconverti par passion, j'ai gardé une obsession : la satisfaction de l'utilisateur final. Pour moi, un projet réussi se gère comme une tournée : une préparation millimétrée pour une exécution sans faille. Je prends du plaisir à concevoir des applications web qui soient à la fois performantes et intuitives pour les utilisateurs.",
     "hero.role": "Développeur Full Stack",
+    "hero.downloadCv": "Télécharger le CV",
     "contact.email": "Email",
+    "contact.emailLabel": "Email",
+    "contact.message": "Message",
+    "contact.name": "Nom",
+    "contact.send": "Envoyer",
+    "contact.title": "Envoyez-moi un message",
     "contact.github": "GitHub",
     "contact.linkedin": "LinkedIn",
 
@@ -168,6 +176,7 @@ export const ui = {
     "nav.skills": "Skills",
     "nav.awards": "Awards",
     "nav.education": "Education",
+    "nav.contact": "Contact",
 
     // Section Titles
     "section.experience": "Work Experience",
@@ -175,13 +184,20 @@ export const ui = {
     "section.skills": "Skills",
     "section.education": "Academic Background",
     "section.awards": "Awards & Prizes",
+    "section.contact": "Contact",
 
     // Specific Labels
     "experience.achievements": "Key Achievements",
     "hero.description":
       "A former postman who changed careers out of passion, I've held onto one obsession: end-user satisfaction. For me, a successful project is managed like a delivery route: meticulous preparation for flawless execution. I enjoy designing web applications that are both high-performing and intuitive for users.",
     "hero.role": "Full Stack Developer",
+    "hero.downloadCv": "Download CV",
     "contact.email": "Email",
+    "contact.emailLabel": "Email",
+    "contact.message": "Message",
+    "contact.name": "Name",
+    "contact.send": "Send",
+    "contact.title": "Send me a message",
     "contact.github": "GitHub",
     "contact.linkedin": "LinkedIn",
 

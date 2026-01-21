@@ -5,7 +5,13 @@ import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
 import { useTranslations } from "@/i18n/utils";
 
-function SkillTag({ skill, index }: { skill: string; index: number }) {
+function SkillTag({
+  skill,
+  index,
+}: {
+  readonly skill: string;
+  readonly index: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -45,7 +51,11 @@ const skillCategoryVariants = {
   },
 };
 
-export default function SkillsSection({ lang }: { lang: "fr" | "en" }) {
+export default function SkillsSection({
+  lang,
+}: {
+  readonly lang: "fr" | "en";
+}) {
   const t = useTranslations(lang);
 
   return (

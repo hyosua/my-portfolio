@@ -1,11 +1,15 @@
 import { workExperience } from "@/lib/data";
 import TimelineItem from "./TimelineItem";
-import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 
-export default function ExperienceSection({ lang }: { lang: "fr" | "en" }) {
+export default function ExperienceSection({
+  lang,
+}: {
+  readonly lang: "fr" | "en";
+}) {
   const t = useTranslations(lang);
   // Définition des variantes pour l'effet de flou
   const blurIn: Variants = {
@@ -66,9 +70,9 @@ export default function ExperienceSection({ lang }: { lang: "fr" | "en" }) {
                     </div>
 
                     <ul className="space-y-3">
-                      {job.achievements.map((achievement, i) => (
+                      {job.achievements.map((achievement) => (
                         <motion.li
-                          key={i}
+                          key={achievement}
                           className="text-sm text-muted-foreground leading-relaxed flex gap-3"
                           variants={blurIn}
                         >

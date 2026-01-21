@@ -5,7 +5,11 @@ import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 
-export default function EducationSection({ lang }: { lang: "fr" | "en" }) {
+export default function EducationSection({
+  lang,
+}: {
+  readonly lang: "fr" | "en";
+}) {
   const t = useTranslations(lang);
   return (
     <section
@@ -52,7 +56,7 @@ export default function EducationSection({ lang }: { lang: "fr" | "en" }) {
                   <ul className="list-none ml-4 space-y-2 text-sm">
                     {edu.achievements.map((achievement, i) => (
                       <motion.li
-                        key={i}
+                        key={achievement}
                         className="text-muted-foreground relative pl-6"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}

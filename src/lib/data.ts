@@ -61,6 +61,18 @@ export const education = [
       "education.miaw.achievements.4",
     ],
   },
+  {
+    institution: "education.dut.institution",
+    location: "Lannion (29)",
+    degree: "education.dut.degree",
+    period: "2013 - 2015",
+    achievements: [
+      "education.dut.achievements.1",
+      "education.dut.achievements.2",
+      "education.dut.achievements.3",
+      "education.dut.achievements.4",
+    ],
+  },
 ];
 export const skills = {
   programmingLanguages: [

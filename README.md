@@ -2,8 +2,6 @@
 
 A sleek, responsive portfolio website built with **Astro**, **React**, and **Tailwind CSS**, featuring modern animations and stunning glassmorphism effects.
 
-![Portfolio Screenshot](https://github.com/user-attachments/assets/4f2466f1-1ebe-4cbe-857c-40eccd63c384)
-
 ## ✨ Features
 
 - **Modern Design** – Clean, professional layout with elegant glassmorphism
@@ -13,10 +11,6 @@ A sleek, responsive portfolio website built with **Astro**, **React**, and **Tai
 - **Blazing Fast** – Powered by Astro for superior performance
 - **Modular Structure** – Built for easy customization and scalability
 - **SEO Friendly** – Structured content and meta tags for better visibility
-
-## 🚀 Demo
-
-👉 [Live Demo](https://rishilol.vercel.app/)
 
 ## 🛠 Getting Started
 
@@ -73,10 +67,7 @@ export const workExperience = [
     location: "Location",
     position: "Your Position",
     period: "Start Date - End Date",
-    achievements: [
-      "Achievement 1",
-      "Achievement 2",
-    ],
+    achievements: ["Achievement 1", "Achievement 2"],
   },
 ];
 ```
@@ -90,10 +81,7 @@ export const education = [
     location: "Location",
     degree: "Your Degree",
     period: "Start Date - End Date",
-    achievements: [
-      "Achievement 1",
-      "Achievement 2",
-    ],
+    achievements: ["Achievement 1", "Achievement 2"],
   },
 ];
 ```
@@ -115,10 +103,7 @@ export const projects = [
   {
     title: "Project Name",
     github: "https://github.com/yourusername/project",
-    description: [
-      "What it does",
-      "Technologies used",
-    ],
+    description: ["What it does", "Technologies used"],
   },
 ];
 ```
@@ -162,12 +147,6 @@ Easily deploy to platforms like **Vercel**, **Netlify**, **GitHub Pages**, or an
 ## 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## ©️ Copyright
-
-© 2025 **Rishikesh S.** All rights reserved.
-
-You’re welcome to use this template for your own portfolio — just update `data.ts` and tweak the design as needed. Please keep attribution to the original author.
 
 ---
 

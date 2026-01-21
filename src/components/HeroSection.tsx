@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 
-export default function HeroSection({ lang }: { lang: "fr" | "en" }) {
+export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   const t = useTranslations(lang);
 
   const containerVariants: Variants = {

@@ -1,12 +1,12 @@
 import { personalInfo } from "@/lib/data";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import ThemeToggle from "./ui/theme-toggle";
 import { useTranslations } from "@/i18n/utils"; // Ne pas oublier l'import !
 
-export default function GlassHeader({ lang }: { lang: "fr" | "en" }) {
+export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations(lang);
 
@@ -35,7 +35,7 @@ export default function GlassHeader({ lang }: { lang: "fr" | "en" }) {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
-          {["experience", "projects", "skills"].map((item, i) => (
+          {["experience", "skills", "projects", "education"].map((item, i) => (
             <motion.a
               key={item}
               href={`#${item}`}

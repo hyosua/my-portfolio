@@ -50,7 +50,7 @@ export default function ProjectsSection({
                     <p>{t(project.description[0] as any)}</p>
                   </CardDescription>
                   <div className="flex flex-wrap gap-2 mt-4">
-                    {(project.tags as string[]).map((tag: string) => (
+                    {project.tags.map((tag: string) => (
                       <span
                         key={tag}
                         className="text-xs bg-purple-500/10 text-purple-500 px-2 py-1 rounded-full"

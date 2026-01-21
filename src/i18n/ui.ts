@@ -75,15 +75,25 @@ export const ui = {
       "Création d'une fonctionnalité de mise-à-jour",
 
     // Education
-    "education.miaw.institution":
-      "Licence Professionnelle MIAW (Métiers de l'Informatique Application Web)",
-    "education.miaw.degree": "LP MIAW",
-    "education.miaw.achievements.1": "Président du club Lorem Ipsum",
+    "education.miaw.institution": "Université d'Évry Val d'Essonne",
+    "education.miaw.degree":
+      "LP MIAW - Métiers de l'Informatique Application Web",
+    "education.miaw.achievements.1":
+      "Programmation de services Web, Conception de sites, SGBD",
     "education.miaw.achievements.2":
-      "Organisation de multiples événements Lorem",
+      "Réseaux, Administration Systèmes, Virtualisation, Sécurité",
     "education.miaw.achievements.3":
-      "Représentation de l'université à des compétitions nationales.",
-    "education.miaw.achievements.4": "Diplômé avec mention.",
+      "Gestion de projet, Organisation et Gestion des entreprises, Anglais, Projets tutorés",
+
+    // DUT Lannion
+    "education.dut.institution": "IUT de Lannion",
+    "education.dut.degree": "DUT Informatique opt. Génie Logiciel",
+    "education.dut.achievements.1":
+      "Programmation, Algorithmique, Systèmes d'Informations, Base de données",
+    "education.dut.achievements.2": "Réseaux, Administration système",
+    "education.dut.achievements.3":
+      "Gestion de projets, Vie en entreprise, Anglais",
+    "education.dut.achievements.4": "Mathématiques",
 
     // Projects
 
@@ -215,14 +225,26 @@ export const ui = {
     "work.teraqua.achievements.4": "Creation of an update feature",
 
     // Education
-    "education.miaw.institution":
-      "Vocational Degree in Web Application Computer Science (MIAW)",
-    "education.miaw.degree": "MIAW Vocational Degree",
-    "education.miaw.achievements.1": "President of Lorem Ipsum Club",
-    "education.miaw.achievements.2": "Organized multiple lorem events",
+    "education.miaw.institution": "University of Évry Val d'Essonne",
+    "education.miaw.degree":
+      "Bachelor’s Degree in Computer Science – Web Application Development (MIAW)",
+    "education.miaw.achievements.1":
+      "Web Services Programming, Website Design, Database Management Systems",
+    "education.miaw.achievements.2":
+      "Networks, Systems Administration, Virtualization, Security",
     "education.miaw.achievements.3":
-      "Represented university in national competitions.",
-    "education.miaw.achievements.4": "Graduated with honors.",
+      "Project Management, Business Organization and Management, English, Supervised Projects",
+
+    // DUT Lannion
+    "education.dut.institution": "IUT of Lannion",
+    "education.dut.degree":
+      "DUT in Computer Science, Software Engineering specialization",
+    "education.dut.achievements.1":
+      "Programming, Algorithms, Information Systems, Databases",
+    "education.dut.achievements.2": "Networks, System Administration",
+    "education.dut.achievements.3":
+      "Project Management, Corporate Life, English",
+    "education.dut.achievements.4": "Mathematics",
 
     // Projects
 

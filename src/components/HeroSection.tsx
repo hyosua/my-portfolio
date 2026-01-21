@@ -91,7 +91,7 @@ export default function HeroSection({ lang }: { lang: "fr" | "en" }) {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <p className="text-lg leading-relaxed text-muted-foreground max-w-2xl font-light">
-            {personalInfo.heroDescription}
+            {t("hero.description")}
           </p>
         </motion.div>
       </div>

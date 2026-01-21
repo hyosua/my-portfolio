@@ -27,9 +27,9 @@ const t = useTranslations(lang);
   <main class="min-h-screen">
     <HeroSection client:load lang={lang} />
     <ExperienceSection client:load lang={lang} />
-    <SkillsSection client:load />
-    <ProjectsSection client:load />
-    <EducationSection client:load />
+    <SkillsSection client:load lang={lang} />
+    <ProjectsSection client:load lang={lang} />
+    <EducationSection client:load lang={lang} />
   </main>
   <Footer client:load />
 </Layout>

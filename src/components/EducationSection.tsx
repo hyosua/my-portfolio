@@ -3,17 +3,19 @@ import TimelineItem from "./TimelineItem";
 import { Award } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
+import { useTranslations } from "@/i18n/utils";
 
-export default function EducationSection() {
+export default function EducationSection({ lang }: { lang: "fr" | "en" }) {
+  const t = useTranslations(lang);
   return (
     <section
       id="education"
-      className="py-12 bg-gradient-to-b from-muted/10 to-background"
+      className="py-12 bg-linear-to-b from-muted/10 to-background"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-          <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            🎓 Education
+          <h2 className="text-3xl font-bold tracking-tighter mb-12 text-center md:text-left uppercase">
+            {t("section.education")}
           </h2>
         </MotionWrapper>
 
@@ -21,9 +23,9 @@ export default function EducationSection() {
           {education.map((edu, index) => (
             <TimelineItem
               key={edu.institution}
-              title={`🎓 ${edu.degree}`}
-              subtitle={`🏛️ ${edu.institution}`}
-              date={`📅 ${edu.period}`}
+              title={`${t(edu.degree as any)}`}
+              subtitle={`🏛️ ${t(edu.institution as any)}`}
+              date={`${edu.period}`}
               isLast={index === education.length - 1}
               index={index}
             >
@@ -44,7 +46,7 @@ export default function EducationSection() {
                       <Award className="h-4 w-4 text-purple-500" />
                     </div>
                     <h4 className="text-sm font-medium">
-                      ✨ Achievements & Activities
+                      {t("education.achievements")}
                     </h4>
                   </div>
                   <ul className="list-none ml-4 space-y-2 text-sm">
@@ -57,7 +59,7 @@ export default function EducationSection() {
                         transition={{ duration: 0.3, delay: 0.1 * i }}
                         viewport={{ once: true }}
                       >
-                        {achievement}
+                        {t(achievement as any)}
                       </motion.li>
                     ))}
                   </ul>

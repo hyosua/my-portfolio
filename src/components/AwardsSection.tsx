@@ -4,8 +4,11 @@ import { Trophy } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
 import { motion } from "framer-motion";
+import { useTranslations, type ui } from "@/i18n/utils";
 
-export default function AwardsSection() {
+export default function AwardsSection({ lang }: { lang: keyof typeof ui }) {
+  const t = useTranslations(lang);
+
   return (
     <section
       id="awards"
@@ -13,8 +16,8 @@ export default function AwardsSection() {
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-          <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            🏆 Awards
+          <h2 className="text-2xl font-bold mb-8 text-center md:text-left uppercase">
+            {t("section.awards")}
           </h2>
         </MotionWrapper>
 
@@ -30,10 +33,10 @@ export default function AwardsSection() {
                   >
                     <Trophy className="h-4 w-4 text-white" />
                   </motion.div>
-                  <h3 className="font-medium">{award.name}</h3>
+                  <h3 className="font-medium">{t(award.name as keyof typeof ui['fr'])}</h3>
                 </div>
                 <p className="text-xs text-muted-foreground mb-1 pl-8">
-                  🏢 {award.issuer}
+                  🏢 {t(award.issuer as keyof typeof ui['fr'])}
                 </p>
                 <div className="flex flex-col space-y-2 mt-auto">
                   <div className="flex justify-between items-center">
@@ -44,15 +47,15 @@ export default function AwardsSection() {
                       className="text-xs px-2 py-1 bg-purple-500/10 rounded-full"
                       whileHover={{ scale: 1.05 }}
                     >
-                      {award.position}
+                      {t(award.position as keyof typeof ui['fr'])}
                     </motion.span>
                   </div>
                   <motion.span
                     className="text-xs text-muted-foreground/80 bg-background/50 px-2 py-1 rounded-md w-fit"
                     whileHover={{ scale: 1.05 }}
                   >
-                    {award.type === "International" ? "🌎 " : "🇮🇳 "}
-                    {award.type}
+                    {t(award.type as keyof typeof ui['fr']) === "International" ? "🌎 " : "🏅 "}
+                    {t(award.type as keyof typeof ui['fr'])}
                   </motion.span>
                 </div>
               </GlassCard>

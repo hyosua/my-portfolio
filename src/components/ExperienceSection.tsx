@@ -45,8 +45,7 @@ export default function ExperienceSection({ lang }: { lang: "fr" | "en" }) {
             {workExperience.map((job, index) => (
               <div key={job.company + job.period}>
                 <TimelineItem
-                  // Nettoyage des chaînes de caractères (retrait des émojis)
-                  title={`${job.position} — ${job.company}`}
+                  title={`${t(job.position as any)} — ${job.company}`}
                   subtitle={job.location}
                   date={job.period}
                   isLast={index === workExperience.length - 1}
@@ -74,7 +73,7 @@ export default function ExperienceSection({ lang }: { lang: "fr" | "en" }) {
                           variants={blurIn}
                         >
                           <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-foreground/30" />
-                          {achievement}
+                          {t(achievement as any)}
                         </motion.li>
                       ))}
                     </ul>

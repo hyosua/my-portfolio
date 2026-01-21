@@ -26,8 +26,11 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   };
 
   return (
-    <section id="hero" className="pt-32 pb-16 md:pt-48 md:pb-24">
-      <div className="container max-w-4xl mx-auto px-6">
+    <section
+      id="hero"
+      className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden"
+    >
+      <div className="container max-w-4xl mx-auto px-6 relative z-10">
         <motion.div
           className="flex flex-col md:flex-row items-center md:items-end justify-between gap-12"
           variants={containerVariants}
@@ -94,7 +97,7 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
             <img
               src={personalInfo.profilePicture}
               alt="Profile"
-              className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-border"
+              className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover transition-all duration-700 border border-border"
             />
           </motion.div>
         </motion.div>

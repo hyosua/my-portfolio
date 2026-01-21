@@ -3,7 +3,7 @@ export const personalInfo = {
   email: "colleterhyosua@gmail.com",
   github: "https://github.com/hyosua",
   linkedin: "https://linkedin.com/in/hyosua",
-  profilePicture: "/profile.jpeg",
+  profilePicture: "/profile.jpg",
   heroDescription: "hero.description",
   cvPath: "/cv-colleter.pdf",
 };

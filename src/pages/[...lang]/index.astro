@@ -22,9 +22,14 @@ export function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const articles = (await getCollection("veille")).sort(
-  (a,b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-)
+
+const allVeille = await getCollection("veille");
+const filteredArticles = allVeille.filter((article) => 
+  article.slug.startsWith(`${lang}/`)
+);
+const articles = filteredArticles.sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
 ---
 
 <Layout lang={lang} description={t("head.description")}>

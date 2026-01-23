@@ -137,6 +137,9 @@ export const ui = {
     "projects.viewOnGithub": "Voir sur GitHub",
     "projects.visitWebsite": "Visiter le site",
 
+    //Veille
+    "veille.readOriginal": "Lire l'article original",
+
     // Awards
     "awards.1.name": "Prix Lorem Ipsum",
     "awards.1.issuer": "Organisation Lorem",
@@ -299,6 +302,9 @@ export const ui = {
     "projects.uxgoodpatterns.description.1":
       "Open Source project: Interactive examples of UX patterns vs anti-patterns. I made a PR for floating labels example",
 
+    // Tech Watch
+    "veille.readOriginal": "Read the original article",
+    
     // Awards
     "awards.1.name": "Lorem Ipsum Award",
     "awards.1.issuer": "Lorem Organization",

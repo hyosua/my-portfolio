@@ -11,6 +11,7 @@ import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import Modal from "./ui/modal";
 import { marked } from "marked";
+import { useTranslations } from "@/i18n/utils";
 
 type VeilleArticle = {
   id: string;
@@ -38,7 +39,7 @@ function VeilleSection({
   const [selectedArticle, setSelectedArticle] = useState<VeilleArticle | null>(
     null
   );
-
+  const t = useTranslations(lang);
   const openModal = (article: VeilleArticle) => {
     setSelectedArticle(article);
   };
@@ -46,6 +47,10 @@ function VeilleSection({
   const closeModal = () => {
     setSelectedArticle(null);
   };
+
+  marked.setOptions({
+    breaks: true,
+  }); 
 
   return (
     <section id="veille" className="py-12 relative">
@@ -59,7 +64,7 @@ function VeilleSection({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {articles.map((article, index) => (
             <MotionWrapper key={article.id} delay={index * 0.2}>
-              <div
+              <button
                 onClick={() => openModal(article)}
                 className="cursor-pointer h-full flex"
               >
@@ -98,7 +103,7 @@ function VeilleSection({
                     </div>
                   </CardFooter>
                 </GlassCard>
-              </div>
+              </button>
             </MotionWrapper>
           ))}
         </div>
@@ -129,7 +134,7 @@ function VeilleSection({
                 rel="noopener noreferrer"
                 className="text-purple-500 hover:underline"
               >
-                Lire l'article original
+                {t("veille.readOriginal")}
               </a>
             </div>
           </div>

@@ -10,6 +10,8 @@ const veilleCollection = defineCollection({
     originalUrl: z.string().url(),
     publishDate: z.date(),
     tags: z.array(z.string()),
+    image: z.string(),
+    description: z.string(),
   }),
 });
 

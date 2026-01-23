@@ -93,7 +93,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
               exit={{ opacity: 0, y: -20 }}
               className="absolute top-full left-4 right-4 mt-2  flex flex-col items-center max-h-[80vh] overflow-y-auto bg-background/98 backdrop-blur-xl border border-primary/30 rounded-2xl shadow-2xl shadow-primary/20 md:hidden"
             >
-              {["experience", "skills", "projects","veille", "education", "contact"].map(
+              {["experience", "skills", "projects", "education","veille", "contact"].map(
                 (item) => (
                   <a
                     key={item}

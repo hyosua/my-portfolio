@@ -15,6 +15,7 @@ export const ui = {
     "nav.projects": "Projets",
     "nav.skills": "Compétences",
     "nav.awards": "Distinctions",
+    "nav.veille": "Veille",
     "nav.education": "Formation",
     "nav.contact": "Contact",
 
@@ -25,6 +26,7 @@ export const ui = {
     "section.education": "Cursus Académique",
     "section.awards": "Prix et distinctions",
     "section.contact": "Contact",
+    "section.veille": "Veille Technologique",
 
     // Labels spécifiques
     "experience.achievements": "Réalisations Clés",
@@ -175,6 +177,7 @@ export const ui = {
     "nav.projects": "Projects",
     "nav.skills": "Skills",
     "nav.awards": "Awards",
+    "nav.veille": "Tech Watch",
     "nav.education": "Education",
     "nav.contact": "Contact",
 
@@ -185,6 +188,7 @@ export const ui = {
     "section.education": "Academic Background",
     "section.awards": "Awards & Prizes",
     "section.contact": "Contact",
+    "section.veille": "Tech Watch",
 
     // Specific Labels
     "experience.achievements": "Key Achievements",

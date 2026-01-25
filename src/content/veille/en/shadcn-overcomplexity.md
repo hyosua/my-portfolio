@@ -2,7 +2,7 @@
 title: "The Incredible Overcomplexity of the Shadcn Radio Button"
 source: "paulmakeswebsites.com"
 originalUrl: "https://paulmakeswebsites.com/writing/shadcn-radio-button"
-publishDate: 2024-05-14
+publishDate: 2026-01-15
 tags: ["react", "css", "shadcn", "html"]
 image: "/veille/radiobuton.webp"
 description: "Modern UI libraries like Shadcn and Radix add significant complexity to simple HTML radio buttons..."

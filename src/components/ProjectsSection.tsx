@@ -1,5 +1,5 @@
 import React from "react";
-import { projects } from "@/lib/data";
+import { projects } from "@/lib/data.tsx";
 import {
   CardContent,
   CardDescription,

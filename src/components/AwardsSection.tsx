@@ -1,5 +1,5 @@
 import React from "react";
-import { awards } from "@/lib/data";
+import { awards } from "@/lib/data.tsx";
 import { Trophy } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";

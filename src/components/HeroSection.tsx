@@ -1,4 +1,4 @@
-import { personalInfo } from "@/lib/data";
+import { personalInfo } from "@/lib/data.tsx";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";

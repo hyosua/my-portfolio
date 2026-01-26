@@ -1,4 +1,4 @@
-import { education } from "@/lib/data";
+import { education } from "@/lib/data.tsx";
 import TimelineItem from "./TimelineItem";
 import { Award } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";

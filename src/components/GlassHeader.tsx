@@ -1,4 +1,4 @@
-import { personalInfo } from "@/lib/data";
+import { personalInfo } from "@/lib/data.tsx";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";

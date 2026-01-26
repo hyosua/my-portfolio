@@ -1,4 +1,4 @@
-import { workExperience } from "@/lib/data";
+import { workExperience } from "@/lib/data.tsx";
 import TimelineItem from "./TimelineItem";
 import { Briefcase } from "lucide-react";
 import { motion } from "framer-motion";

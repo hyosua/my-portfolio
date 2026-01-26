@@ -1,5 +1,5 @@
 import React from "react";
-import { skills } from "@/lib/data";
+import { skills } from "@/lib/data.tsx";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
@@ -9,7 +9,7 @@ function SkillTag({
   skill,
   index,
 }: {
-  readonly skill: string;
+  readonly skill: { name: string; icon: React.ReactNode };
   readonly index: number;
 }) {
   return (
@@ -23,9 +23,12 @@ function SkillTag({
         delay: 0.05 * index,
       }}
       whileHover={{ scale: 1.05, y: -2 }}
-      className="px-3 py-1 bg-muted/80 backdrop-blur-sm rounded-md text-sm border border-purple-500/10 shadow-sm"
+      className="flex flex-col items-center justify-center px-3 py-2 bg-muted/80 backdrop-blur-sm rounded-md text-3xl border border-purple-500/10 shadow-sm"
     >
-      {skill}
+      {skill.icon}
+      <span className="mt-2 text-xs text-foreground">
+        {skill.name}
+      </span>
     </motion.div>
   );
 }
@@ -82,9 +85,9 @@ export default function SkillsSection({
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 {t("skills.frontend")}
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {skills.frontendDevelopment.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                  <SkillTag key={skill.name} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>
@@ -95,9 +98,9 @@ export default function SkillsSection({
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 {t("skills.backend")}
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {skills.backendDevelopment.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                  <SkillTag key={skill.name} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>
@@ -108,9 +111,9 @@ export default function SkillsSection({
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 {t("skills.database")}
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {skills.databaseAndStorage.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                  <SkillTag key={skill.name} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>
@@ -121,9 +124,9 @@ export default function SkillsSection({
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 {t("skills.devops")}
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {skills.cloudAndDevOps.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                  <SkillTag key={skill.name} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>
@@ -134,9 +137,9 @@ export default function SkillsSection({
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 {t("skill.tools")}
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {skills.toolsAndServices.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                  <SkillTag key={skill.name} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>

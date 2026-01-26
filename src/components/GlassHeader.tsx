@@ -9,7 +9,30 @@ import { useTranslations } from "@/i18n/utils";
 export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero"); // Valeur par défaut
+  const [isDarkMode, setIsDarkMode] = useState(false); // New state for theme
   const t = useTranslations(lang);
+
+  useEffect(() => {
+    // Initial theme check
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
+
+    // Observer for theme changes (though ThemeToggle manipulates directly)
+    // A more robust solution might involve context or a global state for theme.
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
+          setIsDarkMode(document.documentElement.classList.contains("dark"));
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -47,23 +70,26 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
     }),
   };
 
+  const logoSrc = isDarkMode ? "/logo/hc-logo-w.png" : "/logo/hc-logo-b.png";
+  const logoAlt = personalInfo.name; // Use personalInfo.name as alt text
+
   return (
     <header className="fixed top-4 w-full z-50 px-4">
       <nav className="max-w-4xl mx-auto backdrop-blur-xl bg-background/60 border border-border/40 rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-black/5">
         <motion.a
           href={lang === "fr" ? "/" : "/en/"}
-          className="text-sm font-bold tracking-tighter uppercase"
           initial="hidden"
           animate="visible"
           variants={blurVariant}
           custom={0}
+          className="flex items-center" // Add flex and items-center for vertical alignment
         >
-          {personalInfo.name}
+          <img src={logoSrc} alt={logoAlt} className="h-7 w-auto" /> {/* Logo image */}
         </motion.a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
-          {["experience", "skills", "projects", "education","veille", "contact"].map(
+          {[ "experience", "skills", "projects", "education","veille", "contact"].map(
             (item, i) => (
               <motion.a
                 key={item}
@@ -93,7 +119,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
               exit={{ opacity: 0, y: -20 }}
               className="absolute top-full left-4 right-4 mt-2  flex flex-col items-center max-h-[80vh] overflow-y-auto bg-background/98 backdrop-blur-xl border border-primary/30 rounded-2xl shadow-2xl shadow-primary/20 md:hidden"
             >
-              {["experience", "skills", "projects", "education","veille", "contact"].map(
+              {[ "experience", "skills", "projects", "education","veille", "contact"].map(
                 (item) => (
                   <a
                     key={item}

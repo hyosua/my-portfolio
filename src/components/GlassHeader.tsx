@@ -75,65 +75,69 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
 
   return (
     <header className="fixed top-4 w-full z-50 px-4">
-      <nav className="max-w-4xl mx-auto backdrop-blur-xl bg-background/60 border border-border/40 rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-black/5">
+      <nav className="max-w-4xl mx-auto backdrop-blur-xl bg-background/70 border border-border/50 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl shadow-primary/5">
         <motion.a
           href={lang === "fr" ? "/" : "/en/"}
           initial="hidden"
           animate="visible"
           variants={blurVariant}
           custom={0}
-          className="flex items-center" // Add flex and items-center for vertical alignment
+          className="flex items-center hover:opacity-70 transition-opacity"
         >
-          <img src={logoSrc} alt={logoAlt} className="h-7 w-auto" /> {/* Logo image */}
+          <img src={logoSrc} alt={logoAlt} className="h-5 w-auto" />
         </motion.a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
-          {[ "experience", "skills", "projects", "education","veille", "contact"].map(
+        <div className="hidden md:flex items-center gap-8">
+          {["experience", "skills", "projects", "education", "veille", "contact"].map(
             (item, i) => (
               <motion.a
                 key={item}
                 href={`#${item}`}
-                className={`text-[10px] uppercase tracking-[0.2em] transition-colors ${
+                className={`relative text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
                   activeSection === item
-                    ? "text-foreground font-black"
-                    : "text-muted-foreground"
-                } hover:text-foreground`}
+                    ? "text-primary font-black scale-110" 
+                    : "text-muted-foreground/80 hover:text-foreground"
+                }`}
                 initial="hidden"
                 animate="visible"
                 variants={blurVariant}
                 custom={i + 1}
               >
                 {t(`nav.${item}` as any)}
+                {activeSection === item && (
+                  <motion.span 
+                    layoutId="activeDot"
+                    className="absolute  top-1 -left-2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"
+                  />
+                )}
               </motion.a>
             ),
           )}
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Nav (Update colors here too) */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-4 right-4 mt-2  flex flex-col items-center max-h-[80vh] overflow-y-auto bg-background/98 backdrop-blur-xl border border-primary/30 rounded-2xl shadow-2xl shadow-primary/20 md:hidden"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="absolute top-full left-4 right-4 mt-4 flex flex-col items-center bg-background/95 backdrop-blur-2xl border border-primary/20 rounded-3xl shadow-2xl md:hidden overflow-hidden"
             >
-              {[ "experience", "skills", "projects", "education","veille", "contact"].map(
+              {["experience", "skills", "projects", "education", "veille", "contact"].map(
                 (item) => (
                   <a
                     key={item}
                     href={`#${item}`}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`py-5 w-full text-xs text-center  font-medium border-b border-primary/30 last:border-0 transition-colors ${
+                    className={`py-6 w-full text-[10px] tracking-[0.3em] uppercase text-center font-bold border-b border-border/50 last:border-0 transition-all ${
                       activeSection === item
-                        ? "text-foreground font-black bg-primary/10"
+                        ? "text-primary bg-primary/5"
                         : "text-muted-foreground"
-                    } hover:text-foreground`}
+                    }`}
                   >
-                    <span className="relative uppercase tracking-[0.2em]">
-                      {t(`nav.${item}` as any)}
-                    </span>
+                    {t(`nav.${item}` as any)}
                   </a>
                 ),
               )}
@@ -142,37 +146,34 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
         </AnimatePresence>
 
         <div className="flex items-center gap-4">
-          {/* Sélecteur de langue */}
-          <div className="flex gap-3 border-r border-border/40 pr-4 mr-1">
+          <div className="flex gap-3 border-r border-border/60 pr-4 mr-1">
             <a
               href="/"
-              className={`text-[10px] font-bold ${
-                lang === "fr" ? "text-foreground" : "text-muted-foreground/40"
+              className={`text-[10px] font-black transition-colors ${
+                lang === "fr" ? "text-primary" : "text-muted-foreground/30 hover:text-muted-foreground"
               }`}
             >
               FR
             </a>
             <a
               href="/en/"
-              className={`text-[10px] font-bold ${
-                lang === "en" ? "text-foreground" : "text-muted-foreground/40"
+              className={`text-[10px] font-black transition-colors ${
+                lang === "en" ? "text-primary" : "text-muted-foreground/30 hover:text-muted-foreground"
               }`}
             >
               EN
             </a>
           </div>
 
-          <ThemeToggle />
+          <div className="hover:scale-110 transition-transform">
+            <ThemeToggle />
+          </div>
 
           <button
-            className="md:hidden"
+            className="md:hidden text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? (
-              <X size={18} strokeWidth={1.5} />
-            ) : (
-              <Menu size={18} strokeWidth={1.5} />
-            )}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>

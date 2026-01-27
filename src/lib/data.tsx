@@ -87,7 +87,6 @@ export const education = [
       "education.miaw.achievements.1",
       "education.miaw.achievements.2",
       "education.miaw.achievements.3",
-      "education.miaw.achievements.4",
     ],
   },
   {

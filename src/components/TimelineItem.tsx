@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 interface TimelineItemProps {
-  title: string;
-  subtitle: string;
-  date: string;
-  isLast?: boolean;
-  index?: number;
-  children?: React.ReactNode;
+  readonly title: string;
+  readonly subtitle: string;
+  readonly date: string;
+  readonly isLast?: boolean;
+  readonly index?: number;
+  readonly children?: React.ReactNode;
 }
 
 export default function TimelineItem({
@@ -28,8 +28,9 @@ export default function TimelineItem({
       viewport={{ once: true, margin: "-50px" }}
     >
       <div className="flex flex-col items-center">
+        {/* LA PUCE : Utilise maintenant la couleur Primary du thème */}
         <motion.div
-          className="flex h-[18px] w-[18px] rounded-full border border-purple-500/50 bg-background dark:bg-muted z-10"
+          className="flex h-4.5 w-4.5 rounded-full border-2 border-primary bg-background z-10 shadow-[0_0_15px_rgba(var(--color-primary),0.2)]"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{
@@ -40,9 +41,11 @@ export default function TimelineItem({
           }}
           viewport={{ once: true, margin: "-50px" }}
         />
+        
+        {/* LA LIGNE : Gradient dynamique basé sur Primary */}
         {!isLast && (
           <motion.div
-            className="w-px grow bg-gradient-to-b from-purple-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"
+            className="w-px grow bg-linear-to-b from-primary/50 via-primary/20 to-transparent"
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
@@ -50,19 +53,28 @@ export default function TimelineItem({
           />
         )}
       </div>
-      <div className={cn("pb-8", isLast ? "pb-0" : "")}>
+
+      <div className={cn("pb-12", isLast ? "pb-0" : "")}>
         <motion.div
-          className="flex flex-col gap-0.5"
-          initial={{ opacity: 0, x: -20 }}
+          className="flex flex-col gap-1"
+          initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <h3 className="font-medium">{title}</h3>
-          <p className="text-sm text-muted-foreground">{subtitle}</p>
-          <p className="text-xs text-muted-foreground/70 mb-2">{date}</p>
+          <h3 className="font-bold text-lg tracking-tight group-hover:text-primary transition-colors">
+            {title}
+          </h3>
+          <div className="flex items-center gap-2 text-sm font-medium text-primary/80 uppercase tracking-wider">
+            {subtitle}
+          </div>
+          <p className="text-xs font-mono text-muted-foreground/60 mt-1 uppercase tracking-widest">
+            {date}
+          </p>
         </motion.div>
+
         <motion.div
+          className="mt-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}

@@ -12,6 +12,7 @@ import MotionWrapper from "./MotionWrapper";
 import Modal from "./ui/modal";
 import { marked } from "marked";
 import { useTranslations } from "@/i18n/utils";
+import { Link } from "lucide-react";
 
 type VeilleArticle = {
   id: string;
@@ -52,50 +53,57 @@ function VeilleSection({
     breaks: true,
   }); 
 
-  return (
-    <section id="veille" className="py-12 relative">
+return (
+    <section id="veille" className="py-24 relative overflow-hidden">
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-          <h2 className="text-3xl font-bold tracking-tighter mb-12 text-center md:text-left uppercase">
+          <h2 className="text-3xl font-bold tracking-tighter mb-16 text-center md:text-left uppercase bg-clip-text text-transparent bg-linear-to-tr from-foreground to-primary">
             {title}
           </h2>
         </MotionWrapper>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {articles.map((article, index) => (
-            <MotionWrapper key={article.id} delay={index * 0.2}>
+            <MotionWrapper key={article.id} delay={index * 0.1}>
               <button
                 onClick={() => openModal(article)}
-                className="cursor-pointer h-full flex"
+                className="group/card cursor-pointer h-full flex w-full text-left"
               >
-                <GlassCard className="group overflow-hidden dark:border-purple-500/10 h-full flex flex-col w-full">
-                  <CardHeader className="bg-linear-to-r from-purple-500/5 to-pink-500/5">
-                    <CardTitle className="text-center group-hover:text-purple-500 transition-colors duration-300">
-                      {article.data.title}
-                    </CardTitle>
-                    <CardDescription className="text-center">
-                      {article.data.source} -{" "}
-                      {new Date(article.data.publishDate).toLocaleDateString(
-                        lang
-                      )}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-1 py-4">
+                <GlassCard className="overflow-hidden border-border/50 transition-all duration-500 
+                                     group-hover/card:border-primary/40 
+                                     group-hover/card:shadow-[0_0_30px_rgba(var(--color-primary),0.1)] 
+                                     h-full flex flex-col w-full">
+                  
+                  {/* Image avec zoom subtil au hover */}
+                  <div className="overflow-hidden h-48">
                     <img
                       src={article.data.image}
                       alt={article.data.title}
-                      className="w-full h-40 object-cover rounded-t-lg"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
                     />
-                    <div className="prose prose-sm dark:prose-invert max-w-none mt-4">
-                      <p>{article.data.description}</p>
-                    </div>
+                  </div>
+
+                  <CardHeader className="bg-primary/5 space-y-2">
+                    <CardTitle className="text-lg leading-tight group-hover/card:text-primary transition-colors">
+                      {article.data.title}
+                    </CardTitle>
+                    <CardDescription className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-primary/60">
+                      {article.data.source} • {new Date(article.data.publishDate).toLocaleDateString(lang)}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent className="flex-1 py-6">
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                      {article.data.description}
+                    </p>
                   </CardContent>
-                  <CardFooter className="flex-wrap justify-center md:justify-start items-center border-t border-border/30 bg-linear-to-r from-purple-500/5 to-pink-500/5 pt-4">
-                    <div className="flex flex-wrap gap-2 mt-4">
+
+                  <CardFooter className="border-t border-border/30 bg-primary/5 py-4">
+                    <div className="flex flex-wrap gap-2">
                       {article.data.tags.map((tag: string) => (
                         <span
                           key={tag}
-                          className="text-xs bg-purple-500/10 text-purple-500 px-2 py-1 rounded-full"
+                          className="text-[10px] font-bold uppercase tracking-tighter bg-primary/10 text-primary px-2 py-1 rounded-md border border-primary/10"
                         >
                           {tag}
                         </span>
@@ -109,32 +117,28 @@ function VeilleSection({
         </div>
       </div>
 
+      {/* MODAL - Nettoyage des couleurs purple */}
       {selectedArticle && (
         <Modal isOpen={!!selectedArticle} onClose={closeModal}>
           <div className="prose dark:prose-invert max-w-none">
-            <h2 className="text-2xl font-bold mb-2">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground">
               {selectedArticle.data.title}
             </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {selectedArticle.data.source} -{" "}
-              {new Date(selectedArticle.data.publishDate).toLocaleDateString(
-                lang
-              )}
+            <p className="text-xs uppercase tracking-widest font-bold text-primary mb-8">
+              {selectedArticle.data.source} — {new Date(selectedArticle.data.publishDate).toLocaleDateString(lang)}
             </p>
             <div
-              className="mt-4"
-              dangerouslySetInnerHTML={{
-                __html: marked(selectedArticle.body),
-              }}
+              className="mt-4 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: marked(selectedArticle.body) }}
             />
-            <div className="mt-6">
+            <div className="mt-12 pt-6 border-t border-border">
               <a
                 href={selectedArticle.data.originalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-500 hover:underline"
+                className="inline-flex items-center text-sm font-bold text-primary hover:opacity-70 transition-all"
               >
-                {t("veille.readOriginal")}
+                <Link className="mr-2" size={18}></Link> {t("veille.readOriginal")}
               </a>
             </div>
           </div>

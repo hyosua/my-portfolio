@@ -16,15 +16,17 @@
 }
 
 .dark {
-  --background: oklch(0.15 0.02 300);   /* Violet très sombre (Aubergine) */
-  --foreground: oklch(0.95 0.03 300);
+  --background: oklch(0.14 0.02 250);      /* Nuit profonde bleutée */
+  --foreground: oklch(0.90 0.02 250);
+  --primary: oklch(0.70 0.15 190);         /* Cyan électrique doux */
   --card: oklch(0.19 0.03 300);
-  --primary: oklch(0.70 0.15 340);      /* Rose magenta doux mais vif */
-  --primary-foreground: oklch(0.15 0.02 300);
-  --secondary: oklch(0.25 0.05 300);
-  --accent: oklch(0.70 0.15 340 / 0.2);
-  --border: oklch(1 0 0 / 15%);
-  --ring: oklch(0.70 0.15 340);
+  --primary-foreground: oklch(0.14 0.02 250);
+  --secondary: oklch(0.22 0.04 250);
+  --muted: oklch(0.22 0.04 250);
+  --muted-foreground: oklch(0.60 0.03 250);
+  --accent: oklch(0.70 0.15 190 / 0.2);
+  --border: oklch(0.30 0.05 250);          /* Bordures visibles mais sombres */
+  --ring: oklch(0.70 0.15 190);
 }
 
 @theme inline {

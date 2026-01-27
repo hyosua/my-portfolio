@@ -1,9 +1,9 @@
 import { personalInfo } from "@/lib/data.tsx";
-import { Github, Mail, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 
 export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   const t = useTranslations(lang);
@@ -42,7 +42,7 @@ return (
         >
           <div className="flex-1 text-center md:text-left">
             <motion.h1
-              className="text-5xl md:text-6xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70"
+              className="text-5xl md:text-6xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-linear-to-br from-primary to-foreground"
               variants={blurIn}
             >
               {personalInfo.name}
@@ -58,7 +58,7 @@ return (
             <motion.div className="flex flex-wrap justify-center md:justify-start gap-6" variants={blurIn}>
               {/* LIENS : On ajoute un hover avec la couleur primary */}
               <a href={`mailto:${personalInfo.email}`} className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm group">
-                <Mail size={16} strokeWidth={1.5} className="group-hover:scale-110 transition-transform" /> Email
+                <SiGmail size={16} strokeWidth={1.5} className="group-hover:scale-110 transition-transform" /> Email
               </a>
               <a
 
@@ -66,11 +66,11 @@ href={personalInfo.github}
 
 target="_blank"
 
-className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 text-sm"
+className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
 
 >
 
-<Github size={16} strokeWidth={1.5} /> GitHub
+<SiGithub size={16} strokeWidth={1.5} /> GitHub
 
 </a>
 
@@ -80,11 +80,11 @@ href={personalInfo.linkedin}
 
 target="_blank"
 
-className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 text-sm"
+className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
 
 >
 
-<Linkedin size={16} strokeWidth={1.5} /> LinkedIn
+<SiLinkedin size={16} strokeWidth={1.5} /> LinkedIn
 
 </a>
 

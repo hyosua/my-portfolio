@@ -18,7 +18,7 @@ export default function EducationSection({
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-          <h2 className="text-3xl font-bold tracking-tighter mb-12 text-center md:text-left uppercase">
+          <h2 className="text-3xl font-bold tracking-tighter mb-16 text-center md:text-left uppercase bg-clip-text text-transparent bg-linear-to-tr from-foreground to-primary">
             {t("section.education")}
           </h2>
         </MotionWrapper>
@@ -39,31 +39,35 @@ export default function EducationSection({
 
               {edu.achievements && edu.achievements.length > 0 && (
                 <motion.div
-                  className="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border border-purple-500/20 dark:bg-card/10 dark:border-purple-500/10 shadow-sm"
+                  className="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border border-primary/20 dark:bg-card/10 dark:border-primary/10 shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-3">
-                    <div className="h-6 w-6 flex items-center justify-center rounded-full bg-purple-500/10 mr-2">
-                      <Award className="h-4 w-4 text-purple-500" />
+                    <div className="h-6 w-6 flex items-center justify-center rounded-full bg-primary/10 mr-2">
+                      <Award className="h-4 w-4 text-primary" />
                     </div>
-                    <h4 className="text-sm font-medium">
+                    <h4 className="text-sm text-primary font-medium">
                       {t("education.achievements")}
                     </h4>
                   </div>
                   <ul className="list-none ml-4 space-y-2 text-sm">
                     {edu.achievements.map((achievement, i) => (
+                      
                       <motion.li
                         key={achievement}
-                        className="text-muted-foreground relative pl-6"
+                        className="text-sm text-muted-foreground leading-relaxed flex gap-4 group/item"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: 0.1 * i }}
                         viewport={{ once: true }}
-                      >
-                        {t(achievement as any)}
+                      >                      
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/40 group-hover/item:bg-primary group-hover/item:scale-125 transition-all duration-300" />
+                        <span className="group-hover/item:text-foreground transition-colors duration-300">
+                          {t(achievement as any)}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>

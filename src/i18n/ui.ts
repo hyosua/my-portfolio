@@ -21,7 +21,7 @@ export const ui = {
 
     // Titres de sections
     "section.experience": "Parcours Professionnel",
-    "section.projects": "Projets Sélectionnés",
+    "section.projects": "Projets",
     "section.skills": "Compétences",
     "section.education": "Cursus Académique",
     "section.awards": "Prix et distinctions",
@@ -31,7 +31,7 @@ export const ui = {
     // Labels spécifiques
     "experience.achievements": "Réalisations Clés",
     "hero.description":
-      "Ancien facteur reconverti par passion, j'ai gardé une obsession : la satisfaction de l'utilisateur final. Pour moi, un projet réussi se gère comme une tournée : une préparation millimétrée pour une exécution sans faille. Je prends du plaisir à concevoir des applications web qui soient à la fois performantes et intuitives pour les utilisateurs.",
+      "Ancien facteur reconverti par passion, j'ai gardé une obsession : la satisfaction du client. Pour moi, un projet se gère comme une tournée : une préparation organisée et méticuleuse pour une exécution fluide et sans détours. Le code n'est qu'un outil, ce qui compte c'est la résolution de problèmes.",
     "hero.role": "Développeur Full Stack",
     "hero.downloadCv": "Télécharger le CV",
     "contact.email": "Email",

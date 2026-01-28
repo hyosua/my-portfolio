@@ -153,6 +153,23 @@ export const projects = [
     website: "https://cadavrexquis.fr",
     videoDesktop: "/videos/cexquis-c.webm",
     videoMobile: "/videos/cexquis-mobile-c.webm",
+    context: "projects.cexquis.context",
+    results: [
+      "projects.cexquis.results.1",
+      "projects.cexquis.results.2",
+      "projects.cexquis.results.3",
+      "projects.cexquis.results.4",
+    ],
+    stackChoices: [
+      "projects.cexquis.stack.1",
+      "projects.cexquis.stack.2",
+      "projects.cexquis.stack.3",
+    ],
+    challenges: [
+      "projects.cexquis.challenges.1",
+      "projects.cexquis.challenges.2",
+      "projects.cexquis.challenges.3",
+    ],
     tags: ["Next.js", "TypeScript", "Redis", "Socket-io", "Tailwind CSS"],
   },
   {
@@ -166,6 +183,8 @@ export const projects = [
     website: "https://peakture.fr",
     videoDesktop: "/videos/peakture-c.webm",
     videoMobile: "/videos/peakture-mobile-c.webm",
+    context: "projects.peakture.context",
+    results: "projects.peakture.results",
     tags: [
       "React",
       "Mongodb",
@@ -187,6 +206,8 @@ export const projects = [
     website: "https://gmblackqueen.fr",
     videoDesktop: "/videos/gmblackqueen-c.webm",
     videoMobile: "/videos/gmblackqueen-mobile-c.webm",
+    context: "projects.gmblackqueen.context",
+    results: "projects.gmblackqueen.results",
     tags: ["HTML", "CSS", "Javascript", "Vanilla", "Swiper.js"],
   },
   {
@@ -197,6 +218,8 @@ export const projects = [
     website: "https://miaw-techwear.fr/",
     videoDesktop: "/videos/miaw-c.webm",
     videoMobile: "/videos/miaw-mobile-c.webm",
+    context: "projects.miaw.context",
+    results: "projects.miaw.results",
     tags: ["PHP", "MySql", "Wordpress", "Bootstrap"],
   },
   {
@@ -205,6 +228,8 @@ export const projects = [
     description: ["projects.uxgoodpatterns.description.1"],
     image: "/uxgoodpatterns.png",
     website: "https://uxgoodpatterns.com/",
+    context: "projects.uxgoodpatterns.context",
+    results: "projects.uxgoodpatterns.results",
     video: "",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Astro"],
   },

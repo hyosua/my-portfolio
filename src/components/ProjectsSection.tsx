@@ -13,7 +13,7 @@ import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { SiGithub } from "react-icons/si";
-import { Link } from "lucide-react";
+import { Info, Link, Plus } from "lucide-react";
 
 export default function ProjectsSection({
   lang,
@@ -22,9 +22,12 @@ export default function ProjectsSection({
 }) {
   const t = useTranslations(lang);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   const [videoSrc, setVideoSrc] = useState("");
 
   const openModal = (project: any) => {
+    setSelectedProject(project);
+    // Détecter si mobile ou desktop pour choisir la vidéo appropriée
     const isMobile = window.innerWidth <= 768;
     const src = isMobile ? project.videoMobile : project.videoDesktop;
     setVideoSrc(src);
@@ -33,6 +36,7 @@ export default function ProjectsSection({
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setSelectedProject(null);
     setVideoSrc("");
   };
 
@@ -68,8 +72,7 @@ export default function ProjectsSection({
               <div className="absolute inset-0 flex items-center justify-center bg-black/10">
                 <div className="
                   bg-primary/90 p-3 rounded-full text-white shadow-xl
-                  /* Sur mobile : toujours visible, taille normale */
-                  opacity-100 scale-100 
+                  hidden md:block
                   /* Sur desktop (md:) : caché par défaut, apparaît au survol */
                   md:opacity-0 md:scale-90 md:group-hover:opacity-100 md:group-hover:scale-100 
                   transition-all duration-300
@@ -79,6 +82,13 @@ export default function ProjectsSection({
                   </svg>
                 </div>
 
+              </div>
+            </div>
+
+            <div className="absolute top-3 right-3 z-10">
+              <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-background/80 backdrop-blur-md border border-border text-[10px] font-bold uppercase text-muted-foreground shadow-sm">
+                <Info size={16} className="text-primary" />
+                {t("projects.details")}
               </div>
             </div>
 
@@ -138,27 +148,79 @@ export default function ProjectsSection({
     </div>
   </div>
   <Modal isOpen={isModalOpen} onClose={closeModal}>
-    {videoSrc && (
-      <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      className="relative overflow-hidden rounded-xl bg-black"
-    >
-      <video
-        src={videoSrc}
-        controls
-        muted
-        autoPlay
-        playsInline
-        className="w-full h-auto max-h-[80vh] rounded-lg shadow-2xl"
-      >
-        <source src={videoSrc} type="video/webm" />
-        Votre navigateur ne supporte pas la lecture de vidéos.
-      </video>
-    </motion.div>
+    {selectedProject && (
+    <div className="flex flex-col gap-6 max-h-[85vh] overflow-y-auto p-2 scrollbar-thin">
       
-    )}
+      {/* SECTION VIDÉO */}
+      <div className="lg:sticky lg:top-0 h-fit">
+        <video
+          key={videoSrc}
+          controls
+          muted
+          autoPlay
+          playsInline
+          className="w-full max-h-[50vh] object-cover lg:max-h-full rounded-lg shadow-lg bg-black"
+        >
+          <source src={videoSrc} type="video/webm" />
+        </video>
+      </div>
+
+      {/* SECTION INFOS*/}
+     <div className="flex flex-col gap-6 overflow-y-auto pr-2">
+      {/* Titre et Tags */}
+      <div>
+        <h3 className="text-2xl font-bold mb-2 text-primary">{t(selectedProject.title)}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {t(selectedProject.context)}
+        </p>
+      </div>
+
+      {/* Choix des outils */}
+      <div className="space-y-3">
+        <h4 className="text-xs font-bold uppercase tracking-widest text-foreground flex items-center gap-2">
+          {t("projects.stack-choice")}
+        </h4>
+        <ul className="space-y-2">
+          {selectedProject.stackChoices.map((key:string) => (
+            <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              {t(key as any)}
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* Liste des fonctionnalités (Results) */}
+      <div className="space-y-3">
+        <h4 className="text-xs font-bold uppercase tracking-widest text-foreground flex items-center gap-2">
+          {t("projects.achievements")}
+        </h4>
+        <ul className="space-y-2">
+          {selectedProject.results.map((key:string) => (
+            <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              {t(key as any)}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Défis techniques */}
+      <div className="space-y-3">
+        <h4 className="text-xs font-bold uppercase tracking-widest text-foreground flex items-center gap-2  ">
+          {t("projects.challenges")}
+        </h4>
+        <ul className="space-y-2">
+          {selectedProject.challenges.map((key: string) => (
+            <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              {t(key as any)}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    </div>
+  )}
   </Modal>
 </section>
   );

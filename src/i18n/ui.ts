@@ -106,9 +106,33 @@ export const ui = {
     "education.dut.achievements.4": "Mathématiques",
 
     // Projects
+    "projects.context": "Contexte",
+    "projects.achievements": "Réalisations",
+    "projects.stack-choice": "Choix des outils",
+    "projects.challenges": "Défis techniques",
+    "projects.results": "Bilan",
+    "projects.view_details": "Voir les détails",
+    "projects.details": "Détails",
+    "projects.explore": "Explorer",
+    "projects.scroll_more": "Faites défiler pour en savoir plus",
 
     // Cadavre exquis
     "projects.cexquis.title": "Cadavre Exquis",
+    "projects.cexquis.context": "Un jeu littéraire collaboratif où chaque joueur écrit une partie d'une phrase sans voir les précédentes, créant ainsi une histoire absurde.",
+    // Choix des outils
+    "projects.cexquis.stack.1": "React & TypeScript : Pour une interface robuste, typée et réactive",
+    "projects.cexquis.stack.2": "Socket.io : Pour une communication temps réel entre les joueurs et le serveur.",
+    "projects.cexquis.stack.3": "Redis: Pour la gestion efficace des sessions de jeu et du stockage temporaire des données.",
+    // Détails des résultats/fonctionnalités
+    "projects.cexquis.results.1": "Gestion de salons privés avec paramètres personnalisables.",
+    "projects.cexquis.results.2": "Intégration d'agents IA via l'API Gemini pour combler le manque de joueurs.",
+    "projects.cexquis.results.3": "Système de vote interactif et affichage dynamique des résultats finaux.",
+    "projects.cexquis.results.4": "Logique métier pour l'association des mots et le roulement des phrases.",
+    // Détails des défis
+    "projects.cexquis.challenges.1": "Gestion de la déconnexion/reconnexion des joueurs sans interrompre la partie.",
+    "projects.cexquis.challenges.2": "Configuration complexe de l'UX pour la création de parties sur-mesure.",
+    "projects.cexquis.challenges.3": "Implémentation et synchronisation des agents IA.",
+    // Description
     "projects.cexquis.description.1":
       "Version en ligne et multijoueur du célèbre jeu littéraire cadavre exquis.",
     "projects.cexquis.description.2":
@@ -270,9 +294,33 @@ export const ui = {
     "education.dut.achievements.4": "Mathematics",
 
     // Projects
-
+    "projects.context": "Context",
+    "projects.achievements": "Achievements",
+    "projects.stack-choice": "Tool Choices",
+    "projects.challenges": "Technical Challenges",
+    "projects.results": "Outcomes",
+    "projects.view_details": "View Details",
+    "projects.details": "Details",
+    "projects.explore": "Explore",
+    "projects.scroll_more": "Scroll to learn more",
+    
     //Cadavre exquis
     "projects.cexquis.title": "Cadavre Exquis",
+    "projects.cexquis.context": "A collaborative literary game where each player writes part of a sentence without seeing the previous parts, creating an absurd story.",
+    // Tool Choices
+    "projects.cexquis.stack.1": "React & TypeScript: For a robust, typed, and responsive interface",
+    "projects.cexquis.stack.2": "Socket.io: For real-time communication between players and the server.",
+    "projects.cexquis.stack.3": "Redis: For efficient game session management and temporary data storage.",
+    // Details of outcomes/features
+    "projects.cexquis.results.1": "Private room management with customizable settings.",
+    "projects.cexquis.results.2": "Integration of AI agents via the Gemini API to fill in for missing players.",
+    "projects.cexquis.results.3": "Interactive voting system and dynamic display of final results.",
+    "projects.cexquis.results.4": "Business logic for word association and sentence rotation.",
+    // Details of challenges
+    "projects.cexquis.challenges.1": "Handling player disconnection/reconnection without interrupting the game.",
+    "projects.cexquis.challenges.2": "Complex UX configuration for creating custom games.",
+    "projects.cexquis.challenges.3": "Implementation and synchronization of AI agents.",
+    // Description
     "projects.cexquis.description.1":
       "Online multiplayer version of the famous literary game cadavre exquis.",
     "projects.cexquis.description.2":

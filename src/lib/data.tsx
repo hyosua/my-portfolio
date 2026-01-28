@@ -41,7 +41,7 @@ export const workExperience = [
     company: "La Poste",
     location: "Yerres (91)",
     position: "work.laposte.position",
-    period: "2026 - Présent",
+    period: "2016 - Présent",
     achievements: [
       "work.laposte.achievements.1",
       "work.laposte.achievements.2",

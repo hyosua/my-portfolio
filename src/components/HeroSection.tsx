@@ -42,7 +42,7 @@ return (
         >
           <div className="flex-1 text-center md:text-left">
             <motion.h1
-              className="text-5xl md:text-6xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-linear-to-br from-primary to-foreground"
+              className="text-5xl md:text-6xl font-teko font-semibold tracking-normal mb-4 bg-clip-text text-transparent bg-linear-to-br from-primary to-foreground"
               variants={blurIn}
             >
               {personalInfo.name}

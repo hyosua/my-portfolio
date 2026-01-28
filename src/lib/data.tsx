@@ -151,6 +151,8 @@ export const projects = [
     ],
     image: "/cexquis2.png",
     website: "https://cadavrexquis.fr",
+    videoDesktop: "/videos/cexquis-c.webm",
+    videoMobile: "/videos/cexquis-mobile-c.webm",
     tags: ["Next.js", "TypeScript", "Redis", "Socket-io", "Tailwind CSS"],
   },
   {
@@ -162,6 +164,8 @@ export const projects = [
     ],
     image: "/peakture.png",
     website: "https://peakture.fr",
+    videoDesktop: "/videos/peakture-c.webm",
+    videoMobile: "/videos/peakture-mobile-c.webm",
     tags: [
       "React",
       "Mongodb",
@@ -181,6 +185,8 @@ export const projects = [
     ],
     image: "/gmblackqueen2.png",
     website: "https://gmblackqueen.fr",
+    videoDesktop: "/videos/gmblackqueen-c.webm",
+    videoMobile: "/videos/gmblackqueen-mobile-c.webm",
     tags: ["HTML", "CSS", "Javascript", "Vanilla", "Swiper.js"],
   },
   {
@@ -189,6 +195,8 @@ export const projects = [
     description: ["projects.miaw.description.1", "projects.miaw.description.2"],
     image: "/miaw2.png",
     website: "https://miaw-techwear.fr/",
+    videoDesktop: "/videos/miaw-c.webm",
+    videoMobile: "/videos/miaw-mobile-c.webm",
     tags: ["PHP", "MySql", "Wordpress", "Bootstrap"],
   },
   {
@@ -197,6 +205,7 @@ export const projects = [
     description: ["projects.uxgoodpatterns.description.1"],
     image: "/uxgoodpatterns.png",
     website: "https://uxgoodpatterns.com/",
+    video: "",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Astro"],
   },
 ];

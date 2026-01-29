@@ -36,17 +36,17 @@ const articles = filteredArticles.sort(
   <GlassHeader client:load lang={lang} />
   <main class="min-h-screen">
     <HeroSection client:load lang={lang} />
-    <ExperienceSection client:load lang={lang} />
-    <SkillsSection client:load lang={lang} />
-    <ProjectsSection client:load lang={lang} />
-    <EducationSection client:load lang={lang} />
+    <ExperienceSection client:visible lang={lang} />
+    <SkillsSection client:visible lang={lang} />
+    <ProjectsSection client:visible lang={lang} />
+    <EducationSection client:visible lang={lang} />
     <VeilleSection 
-      client:load
+      client:visible
       title={t("section.veille")} 
       lang={lang} 
       articles={articles.slice(0, 4)}
       />
-    <ContactSection client:load lang={lang} />
+    <ContactSection client:visible lang={lang} />
   </main>
-  <Footer client:load />
+  <Footer client:visible />
 </Layout>

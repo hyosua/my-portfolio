@@ -26,8 +26,11 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
     },
   };
 
-return (
-    <section id="hero" className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden">
+  return (
+    <section
+      id="hero"
+      className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden"
+    >
       {/* EFFET DE FOND : Pour le côté "chill/ambiance" */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]" />
@@ -56,45 +59,48 @@ return (
               {t("hero.role")}
             </motion.p>
 
-            <motion.div className="flex flex-wrap justify-center md:justify-start gap-6" variants={blurIn}>
-              {/* LIENS : On ajoute un hover avec la couleur primary */}
-              <a href={`mailto:${personalInfo.email}`} className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm group">
-                <SiGmail size={16} strokeWidth={1.5} className="group-hover:scale-110 transition-transform" /> Email
+            <motion.div
+              className="flex flex-wrap justify-center md:justify-start gap-6"
+              variants={blurIn}
+            >
+              {/* LIENS */}
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm group"
+              >
+                <SiGmail
+                  size={16}
+                  strokeWidth={1.5}
+                  className="group-hover:scale-110 transition-transform"
+                />{" "}
+                Email
               </a>
               <a
+                href={personalInfo.github}
+                target="_blank"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
+              >
+                <SiGithub size={16} strokeWidth={1.5} /> GitHub
+              </a>
 
-href={personalInfo.github}
-
-target="_blank"
-
-className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
-
->
-
-<SiGithub size={16} strokeWidth={1.5} /> GitHub
-
-</a>
-
-<a
-
-href={personalInfo.linkedin}
-
-target="_blank"
-
-className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
-
->
-
-<SiLinkedin size={16} strokeWidth={1.5} /> LinkedIn
-
-</a>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm"
+              >
+                <SiLinkedin size={16} strokeWidth={1.5} /> LinkedIn
+              </a>
 
               <Button
                 asChild
-                variant="default" 
+                variant="default"
                 className="hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/20"
               >
-                <a href={personalInfo.cvPath} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={personalInfo.cvPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t("hero.downloadCv")}
                 </a>
               </Button>

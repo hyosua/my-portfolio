@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import ReactMarkdown from "react-markdown";
 
 export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   const t = useTranslations(lang);
@@ -116,9 +117,20 @@ className="text-muted-foreground hover:text-primary transition-colors flex items
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <p className="text-lg leading-relaxed text-muted-foreground max-w-2xl font-light">
-            {t("hero.description")}
-          </p>
+          <div className="text-lg leading-relaxed text-muted-foreground max-w-2xl font-light">
+            <ReactMarkdown
+              components={{
+                strong: ({ node, ...props }) => (
+                  <strong
+                    className="font-semibold text-primary/90"
+                    {...props}
+                  />
+                ),
+              }}
+            >
+              {t("hero.description")}
+            </ReactMarkdown>
+          </div>
         </motion.div>
       </div>
     </section>

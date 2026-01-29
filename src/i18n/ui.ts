@@ -31,7 +31,7 @@ export const ui = {
     // Labels spécifiques
     "experience.achievements": "Réalisations Clés",
     "hero.description":
-      "Ancien facteur reconverti par passion, j'ai gardé une obsession : la satisfaction du client. Pour moi, un projet se gère comme une tournée : une préparation organisée et méticuleuse pour une exécution fluide et sans détours. Le code n'est qu'un outil, ce qui compte c'est la résolution de problèmes.",
+      "Ancien facteur reconverti par **passion**, j'ai gardé une obsession : la **satisfaction du client**. Pour moi, un projet se gère comme une tournée : une **préparation organisée et méticuleuse** pour une exécution fluide et sans détours. **Le code n'est qu'un outil**, ce qui compte pour moi c'est la **résolution de problèmes**.",
     "hero.role": "Développeur Full Stack",
     "hero.downloadCv": "Télécharger le CV",
     "contact.email": "Email",
@@ -324,7 +324,7 @@ export const ui = {
     // Specific Labels
     "experience.achievements": "Key Achievements",
     "hero.description":
-      "A former postman who changed careers out of passion, I've held onto one obsession: end-user satisfaction. For me, a successful project is managed like a delivery route: meticulous preparation for flawless execution. I enjoy designing web applications that are both high-performing and intuitive for users.",
+      "A former postman who changed careers out of **passion**, I've held onto one obsession: **end-user satisfaction**. For me, a successful project is managed like a delivery route: **meticulous preparation** for flawless execution. I enjoy designing web applications that are both **high-performing and intuitive** for users.",
     "hero.role": "Full Stack Developer",
     "hero.downloadCv": "Download CV",
     "contact.email": "Email",

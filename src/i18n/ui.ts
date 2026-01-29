@@ -116,18 +116,23 @@ export const ui = {
     "projects.explore": "Explorer",
     "projects.scroll_more": "Faites défiler pour en savoir plus",
 
-    // Cadavre exquis
+    /**
+     * Cadavre Exquis
+     */
     "projects.cexquis.title": "Cadavre Exquis",
     "projects.cexquis.context": "Un jeu littéraire collaboratif où chaque joueur écrit une partie d'une phrase sans voir les précédentes, créant ainsi une histoire absurde.",
     // Choix des outils
-    "projects.cexquis.stack.1": "React & TypeScript : Pour une interface robuste, typée et réactive",
-    "projects.cexquis.stack.2": "Socket.io : Pour une communication temps réel entre les joueurs et le serveur.",
-    "projects.cexquis.stack.3": "Redis: Pour la gestion efficace des sessions de jeu et du stockage temporaire des données.",
-    // Détails des résultats/fonctionnalités
-    "projects.cexquis.results.1": "Gestion de salons privés avec paramètres personnalisables.",
-    "projects.cexquis.results.2": "Intégration d'agents IA via l'API Gemini pour combler le manque de joueurs.",
-    "projects.cexquis.results.3": "Système de vote interactif et affichage dynamique des résultats finaux.",
-    "projects.cexquis.results.4": "Logique métier pour l'association des mots et le roulement des phrases.",
+    "projects.cexquis.stack.1": "Next.js: Framework react performant, chargement rapide des pages, SEO friendly, pas de rechargement de page",
+    "projects.cexquis.stack.2": "React & TypeScript : Interface robuste et typée: détection de bugs dès la phase de développement",
+    "projects.cexquis.stack.3": "Socket.io : Bibliothèque pour la gestion de la communication temps réel entre les joueurs et le serveur. Permet une connexion persistante avec le serveur => ce dernier 'pousse' les mises à jour aux clients instantanément rendant l'UX fluide et réactive.",
+    "projects.cexquis.stack.4": "Redis: Une base de donnée en mémoire très rapide: gestion efficace des sessions de jeu et du stockage temporaire des données.",
+    "projects.cexquis.stack.5": "Shadcn: Bibliothèque de composants UI réutilisables, accessibles et personnalisables basée sur Radix UI et TailwindCSS.",
+    "projects.cexquis.stack.6": "Fly.io & Docker: Déploiement simple et rapide de l'application dans des conteneurs, faible latence pour les utilisateurs.",
+    // Détails des réalisations
+    "projects.cexquis.achievements.1": "Gestion de salons privés avec paramètres personnalisables.",
+    "projects.cexquis.achievements.2": "Intégration d'agents IA via l'API Gemini pour combler le manque de joueurs.",
+    "projects.cexquis.achievements.3": "Système de vote interactif et affichage dynamique des résultats finaux.",
+    "projects.cexquis.achievements.4": "Logique métier pour l'association des mots et le roulement des phrases.",
     // Détails des défis
     "projects.cexquis.challenges.1": "Gestion de la déconnexion/reconnexion des joueurs sans interrompre la partie.",
     "projects.cexquis.challenges.2": "Configuration complexe de l'UX pour la création de parties sur-mesure.",
@@ -137,26 +142,125 @@ export const ui = {
       "Version en ligne et multijoueur du célèbre jeu littéraire cadavre exquis.",
     "projects.cexquis.description.2":
       "Chaque joueur ajoute un mot sans connaître entièrement le texte des autres, créant collectivement une œuvre imprévisible.",
-    // Peakture
+    // Bilan
+    "projects.cexquis.results.1": "Apprentissage des websockets",
+    "projects.cexquis.results.2": "Créations de composants React complexes pour une UX fluide (formulaires dynamiques, gestion d'états multiples)",
+    "projects.cexquis.results.3": "Apprentissage de Typescript: typage strict qui permet de détecter beaucoup d'erreurs dans le code avant même l'exécution",
+    
+    
+    /**
+     * Peakture
+     */
     "projects.peakture.title": "Peakture",
     "projects.peakture.description.1":
       "Plateforme communautaire avec concours de photographie.",
     "projects.peakture.description.2":
       "Technologies: React, Node.js, Express, MongoDB, Express, Cloudinary",
-    // Gmblackqueen
+      // Contexte
+    "projects.peakture.context": "Une appli web communautaire de photographie permettant d'organiser et de participer à des concours mensuels autour d'un thème unique.",
+    // Choix des outils
+    "projects.peakture.stack.1": "React: Composants réutilisables, interface dynamique, et une UX fluide",
+    "projects.peakture.stack.2": "Vite: Outil indispensable pour démarrer un projet react rapidement avec une configuration minimale.",
+    "projects.peakture.stack.3": "Node.js & Express: Permet de travailler avec le même language en Back-end (Javascript), API REST simple.",
+    "projects.peakture.stack.4": "MongoDB & Mongoose: Base de données NoSQL flexible, adaptée au stockage des contenus documents. Je voulais surtout apprendre à utiliser cette techno.",
+    "projects.peakture.stack.5": "TailwindCSS: Librairie permettant un design rapide, simple, cohérent, et responsive.",
+    "projects.peakture.stack.6": "Cloudinary: Gestion externe des images (upload, transformation, CDN), réduction de la charge serveur, sécurité et perf intégrées",
+    // Détails des réalisations
+    "projects.peakture.achievements.1": "Gestion de salons 'famille' privés, sécurisés",
+    "projects.peakture.achievements.2": "Vote mensuel pour élire la meilleure photo sur un thème donné, restrictions diverses pour l'équité",
+    "projects.peakture.achievements.3": "Upload de photos avec restrictions (1 photo par utilisateur et par thème)",
+    "projects.peakture.achievements.4": "Attribution de points et classement final des participants",
+    // Détails des défis
+    "projects.peakture.challenges.1": "Sécurisation des salons, de l'authentification, des actions utilisateurs",
+    "projects.peakture.challenges.2": "Mise en place d'un système de vote équitable et restrictif. (1 vote par utilisateur mais laisser la possibilité de changer d'avis...)",
+    "projects.peakture.challenges.3": "Mongodb: exigeant sur les schémas et relations entre collections",
+    // Bilan
+    "projects.peakture.results.1": "Montée en compétence sur la stack MERN, React et API REST",
+    "projects.peakture.results.2": "sécurisation d’applications web(JWT, vérifications Back-end, routes)",
+    "projects.peakture.results.3": "Apprentissage du NoSQL avec Mongodb/Mongoose",
+    
+ 
+
+    /** 
+     * Gmblackqueen
+    */
     "projects.gmblackqueen.title": "GmBlackqueen",
     "projects.gmblackqueen.description.1":
       "Réalisation d'un site vitrine pour une Make-up Artist de Paris.",
     "projects.gmblackqueen.description.2": "HTML,CSS,JS,Swiper.js",
-    // Miaw
+    // Contexte
+    "projects.gmblackqueen.context": "Site vitrine présentant le travail d'une maquilleuse professionnelle basée à Paris.",
+    // Choix des outils
+    "projects.gmblackqueen.stack.1": "HTML & CSS: pas de framework, tout est fait maison pour un contrôle total du design et des animations",
+    "projects.gmblackqueen.stack.2": "JavaScript Vanilla: Interactions simples et efficaces",
+    "projects.gmblackqueen.stack.3": "Swiper.js: Librairie légère et performante pour créer des carrousels d'images responsives et tactiles",
+    // Détail des réalisations
+    "projects.gmblackqueen.achievements.1": "Galerie d'images pour présenter le portfolio de la maquilleuse",
+    "projects.gmblackqueen.achievements.2": "Design responsive et moderne, adapté à tous les appareils",
+    "projects.gmblackqueen.achievements.3": "Animations CSS pour un rendu élégant et professionnel",
+    "projects.gmblackqueen.achievements.4": "Formulaire de contact Nodemailer pour faciliter les demandes de rendez-vous",
+    // Défis techniques
+    "projects.gmblackqueen.challenges.1": "Optimiser les performances pour un chargement rapide des images (lazy loading, compression)",
+    "projects.gmblackqueen.challenges.2": "Créer un design unique et attrayant sans framework CSS",
+    "projects.gmblackqueen.challenges.3": "Réalisation de carousels 'à la main' laborieuses et imparfaites => choix d'utiliser une librairie externe",
+    // Bilan
+    "projects.gmblackqueen.results.1": "Ce projet m'a permis de me lancer dans mon projet de reconversion en reprenant les bases",
+    "projects.gmblackqueen.results.2": "Apprentissage du design responsive et des animations CSS",
+    "projects.gmblackqueen.results.3": "Première expérience de création de site vitrine pour un client réel",
+
+
+
+    /**
+     * MIAW 
+    */ 
     "projects.miaw.title": "miaw-techwear",
     "projects.miaw.description.1":
       "Création d’un site e-commerce fictif proposant des vêtements high-tech de luxe pour félins.",
     "projects.miaw.description.2": "PHP,Mysql,Wordpress,Bootstrap",
-    // UX Good Patterns
+    // Contexte
+    "projects.miaw.context": "Site e-commerce fictif vendant des vêtements high-tech de luxe pour félins.",
+    // Choix des outils
+    "projects.miaw.stack.1": "Wordpress: CMS populaire et flexible pour une gestion facile du contenu",
+    "projects.miaw.stack.2": "Bootstrap: Je voulais apprendre à utiliser une alternative à TailwindCSS",
+    "projects.miaw.stack.3": "PHP & MySQL: Technologies classiques pour le développement web back-end et la gestion de bases de données",
+    // Détail des réalisations
+    "projects.miaw.achievements.1": "Catalogue de produits avec fiches détaillées",
+    "projects.miaw.achievements.2": "Panier d'achat et processus de commande simplifié",
+    "projects.miaw.achievements.3": "Création d'un thème Wordpress personnalisé",
+    "projects.miaw.achievements.4": "Création d'un script shell pour automatiser la création de sites WP en environnement LAMP",
+    // Défis techniques
+    "projects.miaw.challenges.1": "Apprentissage de la création de thèmes Wordpress (widgets, custom post types, taxonomies, etc.)",
+    "projects.miaw.challenges.2": "Configuration de l'environnement LAMP (Virtualhosts, bases de données, permissions...)",
+    "projects.miaw.challenges.3": "Sécurisation du site (protection contre les injections SQL, XSS, etc.)",
+    // Bilan
+    "projects.miaw.results.1": "Apprentissage de Wordpress et de la création de thèmes personnalisés",
+    "projects.miaw.results.2": "Compréhension du fonctionnement d'un site e-commerce (gestion des produits, panier, commandes)",
+
+
+    /**
+     * UX Good Patterns
+     */ 
     "projects.uxgoodpatterns.title": "UX Good Patterns",
     "projects.uxgoodpatterns.description.1":
-      "Projet Open Source: Exemples interactifs de patterns UX et d'anti-patterns. Ma contribution: PR d'un exemple d'utilisation des Floating Labels",
+    "Projet Open Source: Exemples interactifs de patterns UX et d'anti-patterns. Ma contribution: PR d'un exemple d'utilisation des Floating Labels",
+    // Contexte
+    "projects.uxgoodpatterns.context": "Participation à un projet OpenSource: Bibliothèque de patterns UX et d'anti-patterns avec des exemples interactifs.",
+    // Choix des outils
+    "projects.uxgoodpatterns.stack.1": "Astro: Framework moderne qui génère des pages HTML statiques très rapidement => performances de chargement ",
+    "projects.uxgoodpatterns.stack.2": "React: Astro permet également d'intégrer des 'îles' d'intéractivité en utilisant des frameworks comme React. La majorité de ce site est statique mais React permet ici d'ajouter les composants 'Bad Examples' et 'Good Examples' qui nécessitent de l'interactivité.",
+    "projects.uxgoodpatterns.stack.3": "Typescript: Rend le code plus robuste, facile à maintenir et évite les erreurs courantes.",
+    "projects.uxgoodpatterns.stack.4": "TailwindCSS/Shadcn UI: permet d'utiliser une bibliothèque de composants réutilisables, accessibles et personnalisables tout en respectant les règles d'accessibilité (contraste, navigation clavier, etc.)",
+    // Détail des réalisations
+    "projects.uxgoodpatterns.achievements.1": "PR d'un exemple de Floating Labels (garder un design épuré tout en respectant les règles d'accessibilité) avec démonstration interactive et explications",
+    "projects.uxgoodpatterns.achievements.2": "Respect du processus de contribution Open Source (fork, branches, PR, revues de code)",
+    // Défis techniques
+    "projects.uxgoodpatterns.challenges.1": "Compréhension du code existant et de l'architecture du projet",
+    "projects.uxgoodpatterns.challenges.2": "Erreurs netlify lors du build => correction des imports et dépendances",
+    // Bilan
+    "projects.uxgoodpatterns.results.1": "Première contribution à un projet Open Source, compréhension du workflow GitHub",
+    "projects.uxgoodpatterns.results.2": "Apprentissage d'Astro et de l'intégration de composants React dans un site statique",
+    "projects.uxgoodpatterns.results.3": "Renforcement des bonnes pratiques en matière d'accessibilité web",
+
     // Liens
     "projects.viewOnGithub": "Voir sur GitHub",
     "projects.visitWebsite": "Visiter le site",
@@ -312,10 +416,10 @@ export const ui = {
     "projects.cexquis.stack.2": "Socket.io: For real-time communication between players and the server.",
     "projects.cexquis.stack.3": "Redis: For efficient game session management and temporary data storage.",
     // Details of outcomes/features
-    "projects.cexquis.results.1": "Private room management with customizable settings.",
-    "projects.cexquis.results.2": "Integration of AI agents via the Gemini API to fill in for missing players.",
-    "projects.cexquis.results.3": "Interactive voting system and dynamic display of final results.",
-    "projects.cexquis.results.4": "Business logic for word association and sentence rotation.",
+    "projects.cexquis.achievements.1": "Private room management with customizable settings.",
+    "projects.cexquis.achievements.2": "Integration of AI agents via the Gemini API to fill in for missing players.",
+    "projects.cexquis.achievements.3": "Interactive voting system and dynamic display of final results.",
+    "projects.cexquis.achievements.4": "Business logic for word association and sentence rotation.",
     // Details of challenges
     "projects.cexquis.challenges.1": "Handling player disconnection/reconnection without interrupting the game.",
     "projects.cexquis.challenges.2": "Complex UX configuration for creating custom games.",

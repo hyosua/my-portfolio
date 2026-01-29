@@ -189,13 +189,13 @@ export default function ProjectsSection({
           ))}
         </ul>
       </div>
-      {/* Liste des fonctionnalités (Results) */}
+      {/* Réalisations (fonctionnalités) */}
       <div className="space-y-3">
         <h4 className="text-xs font-bold uppercase tracking-widest text-foreground flex items-center gap-2">
           {t("projects.achievements")}
         </h4>
         <ul className="space-y-2">
-          {selectedProject.results.map((key:string) => (
+          {selectedProject.achievements.map((key:string) => (
             <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
               {t(key as any)}
@@ -218,6 +218,23 @@ export default function ProjectsSection({
           ))}
         </ul>
       </div>
+      
+      {/* Bilan */}
+      <div className="space-y-3">
+        <h4 className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+          {t("projects.results")}
+        </h4>
+        <ul className="space-y-2">
+          {selectedProject.results.map((key:string) => (
+            <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              {t(key as any)}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      
     </div>
     </div>
   )}

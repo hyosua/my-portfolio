@@ -318,8 +318,9 @@ export const projects = [
       "projects.uxgoodpatterns.results.2",
       "projects.uxgoodpatterns.results.3",
     ],
-    video: "",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Astro"],
+    videoDesktop: "/videos/ux-good-patterns-c.webm",
+    videoMobile: "/videos/ux-good-patterns-mobile-c.webm",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Astro","Shadcn UI"],
   },
 ];
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
-import ReactMarkdown from "react-markdown";
+import Markdown from "./ui/markdown";
 
 export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
   const t = useTranslations(lang);
@@ -46,7 +46,7 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
         >
           <div className="flex-1 text-center md:text-left">
             <motion.h1
-              className="text-5xl md:text-6xl font-teko font-semibold tracking-normal mb-4 bg-clip-text text-transparent bg-linear-to-br from-primary to-foreground"
+              className="text-5xl md:text-7xl font-teko font-semibold tracking-normal mb-4 bg-clip-text text-transparent bg-linear-to-br from-primary to-foreground"
               variants={blurIn}
             >
               {personalInfo.name}
@@ -124,18 +124,7 @@ export default function HeroSection({ lang }: { readonly lang: "fr" | "en" }) {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <div className="text-lg leading-relaxed text-muted-foreground max-w-2xl font-light">
-            <ReactMarkdown
-              components={{
-                strong: ({ node, ...props }) => (
-                  <strong
-                    className="font-semibold text-primary/90"
-                    {...props}
-                  />
-                ),
-              }}
-            >
-              {t("hero.description")}
-            </ReactMarkdown>
+            <Markdown content={t("hero.description")} />
           </div>
         </motion.div>
       </div>

@@ -4,6 +4,7 @@ import { Award } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
+import Markdown from "./ui/markdown";
 
 export default function EducationSection({
   lang,
@@ -66,7 +67,7 @@ export default function EducationSection({
                       >                      
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/40 group-hover/item:bg-primary group-hover/item:scale-125 transition-all duration-300" />
                         <span className="group-hover/item:text-foreground transition-colors duration-300">
-                          {t(achievement as any)}
+                          <Markdown content={t(achievement as any)} />
                         </span>
                       </motion.li>
                     ))}

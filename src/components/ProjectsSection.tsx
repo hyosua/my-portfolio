@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { SiGithub } from "react-icons/si";
 import { Info, Link } from "lucide-react";
+import Markdown from "./ui/markdown";
 
 export default function ProjectsSection({
   lang,
@@ -100,7 +101,7 @@ export default function ProjectsSection({
 
             <CardContent className="flex-1 pt-6">
               <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">
-                {t(project.description[0] as any)}
+                <Markdown content={t(project.description[0] as any)} />
               </CardDescription>
               <div className="flex flex-wrap gap-2 mt-6">
                 {project.tags.map((tag: string) => (
@@ -171,20 +172,20 @@ export default function ProjectsSection({
       <div>
         <h3 className="text-2xl font-bold mb-2 text-primary">{t(selectedProject.title)}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          {t(selectedProject.context)}
+          <Markdown content={t(selectedProject.context)} />
         </p>
       </div>
 
       {/* Choix des outils */}
       <div className="space-y-3">
         <h4 className="text-xs font-bold uppercase tracking-widest text-foreground flex items-center gap-2">
-          {t("projects.stack-choice")}
+          {t("projects.stack-choice")} 
         </h4>
         <ul className="space-y-2">
           {selectedProject.stackChoices.map((key:string) => (
             <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
-              {t(key as any)}
+              <Markdown content={t(key as any)} />
             </li>
           ))}
         </ul>
@@ -198,7 +199,7 @@ export default function ProjectsSection({
           {selectedProject.achievements.map((key:string) => (
             <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
-              {t(key as any)}
+              <Markdown content={t(key as any)} />
             </li>
           ))}
         </ul>
@@ -213,7 +214,7 @@ export default function ProjectsSection({
           {selectedProject.challenges.map((key: string) => (
             <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
-              {t(key as any)}
+              <Markdown content={t(key as any)} />
             </li>
           ))}
         </ul>
@@ -228,7 +229,7 @@ export default function ProjectsSection({
           {selectedProject.results.map((key:string) => (
             <li key={key} className="text-sm text-muted-foreground flex gap-3 group hover:bg-primary/10 p-2 rounded-md transition-colors">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
-              {t(key as any)}
+              <Markdown content={t(key as any)} />
             </li>
           ))}
         </ul>

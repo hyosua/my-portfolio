@@ -162,6 +162,7 @@ export default function ProjectsSection({
           playsInline
           className="w-full max-h-[50vh] object-cover lg:max-h-full rounded-lg shadow-lg bg-black"
         >
+          <source src={videoSrc.replace('.webm','.mp4')} type="video/mp4" />
           <source src={videoSrc} type="video/webm" />
         </video>
       </div>
@@ -171,9 +172,9 @@ export default function ProjectsSection({
       {/* Titre et Tags */}
       <div>
         <h3 className="text-2xl font-bold mb-2 text-primary">{t(selectedProject.title)}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <div className="text-sm text-muted-foreground leading-relaxed">
           <Markdown content={t(selectedProject.context)} />
-        </p>
+        </div>
       </div>
 
       {/* Choix des outils */}

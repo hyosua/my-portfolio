@@ -13,7 +13,7 @@ import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { SiGithub } from "react-icons/si";
-import { Info, Link, Plus } from "lucide-react";
+import { Info, Link } from "lucide-react";
 
 export default function ProjectsSection({
   lang,
@@ -218,7 +218,7 @@ export default function ProjectsSection({
           ))}
         </ul>
       </div>
-      
+
       {/* Bilan */}
       <div className="space-y-3">
         <h4 className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">

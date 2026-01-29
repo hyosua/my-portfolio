@@ -408,51 +408,149 @@ export const ui = {
     "projects.explore": "Explore",
     "projects.scroll_more": "Scroll to learn more",
     
-    //Cadavre exquis
-    "projects.cexquis.title": "Cadavre Exquis",
-    "projects.cexquis.context": "A collaborative literary game where each player writes part of a sentence without seeing the previous parts, creating an absurd story.",
-    // Tool Choices
-    "projects.cexquis.stack.1": "React & TypeScript: For a robust, typed, and responsive interface",
-    "projects.cexquis.stack.2": "Socket.io: For real-time communication between players and the server.",
-    "projects.cexquis.stack.3": "Redis: For efficient game session management and temporary data storage.",
-    // Details of outcomes/features
-    "projects.cexquis.achievements.1": "Private room management with customizable settings.",
-    "projects.cexquis.achievements.2": "Integration of AI agents via the Gemini API to fill in for missing players.",
+    /**
+     * Cadavre Exquis
+     */
+    "projects.cexquis.title": "Exquisite Corpse",
+    "projects.cexquis.context": "A collaborative literary game where each player writes part of a sentence without seeing the previous ones, resulting in an absurd story.",
+    // Choix des outils
+    "projects.cexquis.stack.1": "Next.js: High-performance React framework, fast page loading, SEO-friendly, no full page reloads",
+    "projects.cexquis.stack.2": "React & TypeScript: Robust and strongly typed interface, early bug detection during development",
+    "projects.cexquis.stack.3": "Socket.io: Library for managing real-time communication between players and the server. Enables persistent connections so the server can push updates instantly, making the UX smooth and responsive.",
+    "projects.cexquis.stack.4": "Redis: Very fast in-memory database, efficient management of game sessions and temporary data storage.",
+    "projects.cexquis.stack.5": "Shadcn: Reusable, accessible, and customizable UI component library based on Radix UI and TailwindCSS.",
+    "projects.cexquis.stack.6": "Fly.io & Docker: Simple and fast application deployment in containers, low latency for users.",
+    // Détails des réalisations
+    "projects.cexquis.achievements.1": "Management of private rooms with customizable settings.",
+    "projects.cexquis.achievements.2": "Integration of AI agents via the Gemini API to compensate for missing players.",
     "projects.cexquis.achievements.3": "Interactive voting system and dynamic display of final results.",
     "projects.cexquis.achievements.4": "Business logic for word association and sentence rotation.",
-    // Details of challenges
+    // Détails des défis
     "projects.cexquis.challenges.1": "Handling player disconnection/reconnection without interrupting the game.",
-    "projects.cexquis.challenges.2": "Complex UX configuration for creating custom games.",
+    "projects.cexquis.challenges.2": "Complex UX configuration for creating fully customized games.",
     "projects.cexquis.challenges.3": "Implementation and synchronization of AI agents.",
     // Description
     "projects.cexquis.description.1":
-      "Online multiplayer version of the famous literary game cadavre exquis.",
+      "Online multiplayer version of the famous literary game Exquisite Corpse.",
     "projects.cexquis.description.2":
       "Each player adds a word without fully knowing the others' text, collectively creating an unpredictable work.",
-    // peakture
+    // Bilan
+    "projects.cexquis.results.1": "Learning WebSockets",
+    "projects.cexquis.results.2": "Building complex React components for a smooth UX (dynamic forms, multiple state management)",
+    "projects.cexquis.results.3": "Learning TypeScript: strict typing that helps detect many errors in the code even before execution",
+
+
+    /**
+     * Peakture
+     */
     "projects.peakture.title": "Peakture",
     "projects.peakture.description.1":
-      "Photo contest platform. This site allows you to create or join a community of photography enthusiasts and participate in exciting contests.",
+      "Community platform with photography contests.",
     "projects.peakture.description.2":
       "Technologies: React, Node.js, Express, MongoDB, Express, Cloudinary",
-    //Liens
-    "projects.viewOnGithub": "View on GitHub",
-    "projects.visitWebsite": "Visit the site",
-    // Gmblackqueen
+      // Contexte
+    "projects.peakture.context": "A community photography web app that allows organizing and participating in monthly contests around a unique theme.",
+    // Choix des outils
+    "projects.peakture.stack.1": "React: Reusable components, dynamic interface, and smooth UX",
+    "projects.peakture.stack.2": "Vite: Essential tool to quickly start a React project with minimal configuration.",
+    "projects.peakture.stack.3": "Node.js & Express: Enables using the same language on the back-end (JavaScript), simple REST API.",
+    "projects.peakture.stack.4": "MongoDB & Mongoose: Flexible NoSQL database, well-suited for document-based content storage. Mainly chosen to learn this technology.",
+    "projects.peakture.stack.5": "TailwindCSS: Library enabling fast, simple, consistent, and responsive design.",
+    "projects.peakture.stack.6": "Cloudinary: External image management (upload, transformation, CDN), reduced server load, built-in security and performance",
+    // Détails des réalisations
+    "projects.peakture.achievements.1": "Management of private and secure 'family' rooms",
+    "projects.peakture.achievements.2": "Monthly voting to elect the best photo for a given theme, with various restrictions to ensure fairness",
+    "projects.peakture.achievements.3": "Photo upload with restrictions (1 photo per user per theme)",
+    "projects.peakture.achievements.4": "Point attribution and final participant ranking",
+    // Détails des défis
+    "projects.peakture.challenges.1": "Securing rooms, authentication, and user actions",
+    "projects.peakture.challenges.2": "Implementing a fair and restrictive voting system (1 vote per user while allowing vote changes...)",
+    "projects.peakture.challenges.3": "MongoDB: demanding when it comes to schemas and relationships between collections",
+    // Bilan
+    "projects.peakture.results.1": "Skill improvement on the MERN stack, React, and REST APIs",
+    "projects.peakture.results.2": "Web application security (JWT, back-end validations, routes)",
+    "projects.peakture.results.3": "Learning NoSQL with MongoDB/Mongoose",
+
+
+    /** 
+     * Gmblackqueen
+    */
     "projects.gmblackqueen.title": "GmBlackqueen",
     "projects.gmblackqueen.description.1":
-      "Creation of a showcase website for a Paris-based makeup artist",
-    "projects.gmblackqueen.description.2": "HTML,CSS,JS,Swiper.js",
-    // Miaw
+      "Creation of a showcase website for a Paris-based Make-up Artist.",
+    "projects.gmblackqueen.description.2": "HTML, CSS, JS, Swiper.js",
+    // Contexte
+    "projects.gmblackqueen.context": "Showcase website presenting the work of a professional makeup artist based in Paris.",
+    // Choix des outils
+    "projects.gmblackqueen.stack.1": "HTML & CSS: No framework, everything is handmade for full control over design and animations",
+    "projects.gmblackqueen.stack.2": "Vanilla JavaScript: Simple and effective interactions",
+    "projects.gmblackqueen.stack.3": "Swiper.js: Lightweight and high-performance library to create responsive and touch-friendly image carousels",
+    // Détail des réalisations
+    "projects.gmblackqueen.achievements.1": "Image gallery to showcase the makeup artist's portfolio",
+    "projects.gmblackqueen.achievements.2": "Responsive and modern design, adapted to all devices",
+    "projects.gmblackqueen.achievements.3": "CSS animations for an elegant and professional look",
+    "projects.gmblackqueen.achievements.4": "Nodemailer contact form to facilitate appointment requests",
+    // Défis techniques
+    "projects.gmblackqueen.challenges.1": "Performance optimization for fast image loading (lazy loading, compression)",
+    "projects.gmblackqueen.challenges.2": "Creating a unique and attractive design without a CSS framework",
+    "projects.gmblackqueen.challenges.3": "Manual carousel implementations that were tedious and imperfect, leading to the choice of an external library",
+    // Bilan
+    "projects.gmblackqueen.results.1": "This project allowed me to start my career change journey by revisiting the fundamentals",
+    "projects.gmblackqueen.results.2": "Learning responsive design and CSS animations",
+    "projects.gmblackqueen.results.3": "First experience creating a showcase website for a real client",
+
+
+    /**
+     * MIAW 
+    */ 
     "projects.miaw.title": "miaw-techwear",
     "projects.miaw.description.1":
-      "Creation of a fictional e-commerce website offering luxury high-tech clothing for felines",
-    "projects.miaw.description.2": "PHP,Mysql,Wordpress,Bootstrap",
+      "Creation of a fictional e-commerce website selling luxury high-tech clothing for felines.",
+    "projects.miaw.description.2": "PHP, MySQL, WordPress, Bootstrap",
+    // Contexte
+    "projects.miaw.context": "Fictional e-commerce website selling luxury high-tech clothing for felines.",
+    // Choix des outils
+    "projects.miaw.stack.1": "WordPress: Popular and flexible CMS for easy content management",
+    "projects.miaw.stack.2": "Bootstrap: I wanted to learn how to use an alternative to TailwindCSS",
+    "projects.miaw.stack.3": "PHP & MySQL: Classic technologies for back-end web development and database management",
+    // Détail des réalisations
+    "projects.miaw.achievements.1": "Product catalog with detailed product pages",
+    "projects.miaw.achievements.2": "Shopping cart and simplified checkout process",
+    "projects.miaw.achievements.3": "Creation of a custom WordPress theme",
+    "projects.miaw.achievements.4": "Creation of a shell script to automate WordPress site setup in a LAMP environment",
+    // Défis techniques
+    "projects.miaw.challenges.1": "Learning how to create WordPress themes (widgets, custom post types, taxonomies, etc.)",
+    "projects.miaw.challenges.2": "Setting up the LAMP environment (virtual hosts, databases, permissions...)",
+    "projects.miaw.challenges.3": "Securing the site (protection against SQL injections, XSS, etc.)",
+    // Bilan
+    "projects.miaw.results.1": "Learning WordPress and custom theme development",
+    "projects.miaw.results.2": "Understanding how an e-commerce website works (product management, cart, orders)",
 
-    // UX Good Patterns
+
+    /**
+     * UX Good Patterns
+     */ 
     "projects.uxgoodpatterns.title": "UX Good Patterns",
     "projects.uxgoodpatterns.description.1":
-      "Open Source project: Interactive examples of UX patterns vs anti-patterns. I made a PR for floating labels example",
+    "Open Source project: Interactive examples of UX patterns and anti-patterns. My contribution: PR adding an example of Floating Labels usage",
+    // Contexte
+    "projects.uxgoodpatterns.context": "Contribution to an Open Source project: UX patterns and anti-patterns library with interactive examples.",
+    // Choix des outils
+    "projects.uxgoodpatterns.stack.1": "Astro: Modern framework that generates static HTML pages very quickly, resulting in excellent loading performance",
+    "projects.uxgoodpatterns.stack.2": "React: Astro also allows integrating interactive 'islands' using frameworks like React. Most of the site is static, but React is used here to add the 'Bad Examples' and 'Good Examples' components that require interactivity.",
+    "projects.uxgoodpatterns.stack.3": "TypeScript: Makes the code more robust, easier to maintain, and prevents common errors.",
+    "projects.uxgoodpatterns.stack.4": "TailwindCSS/Shadcn UI: Enables the use of reusable, accessible, and customizable component libraries while respecting accessibility guidelines (contrast, keyboard navigation, etc.)",
+    // Détail des réalisations
+    "projects.uxgoodpatterns.achievements.1": "PR adding a Floating Labels example (maintaining a clean design while respecting accessibility guidelines) with interactive demo and explanations",
+    "projects.uxgoodpatterns.achievements.2": "Respecting the Open Source contribution process (fork, branches, PRs, code reviews)",
+    // Défis techniques
+    "projects.uxgoodpatterns.challenges.1": "Understanding the existing codebase and project architecture",
+    "projects.uxgoodpatterns.challenges.2": "Netlify build errors, fixed by correcting imports and dependencies",
+    // Bilan
+    "projects.uxgoodpatterns.results.1": "First contribution to an Open Source project, understanding the GitHub workflow",
+    "projects.uxgoodpatterns.results.2": "Learning Astro and integrating React components into a static site",
+    "projects.uxgoodpatterns.results.3": "Strengthening best practices in web accessibility",
+
 
     // Tech Watch
     "veille.readOriginal": "Read the original article",

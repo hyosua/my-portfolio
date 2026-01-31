@@ -24,22 +24,15 @@ export default function ProjectsSection({
   const t = useTranslations(lang);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
-  const [videoSrc, setVideoSrc] = useState("");
-
 
   const openModal = (project: any) => {
     setSelectedProject(project);
-    // Détecter si mobile ou desktop pour choisir la vidéo appropriée
-    const isMobile = window.innerWidth <= 768;
-    const src = isMobile ? project.videoMobile : project.videoDesktop;
-    setVideoSrc(src);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
-    setVideoSrc("");
   };
 
   const handleLinkClick = (e: React.MouseEvent) => {
@@ -156,16 +149,17 @@ export default function ProjectsSection({
       {/* SECTION VIDÉO */}
       <div className="lg:sticky lg:top-0 h-fit">
         <video
-          key={videoSrc}
+          key={selectedProject.title}
           controls
           muted
           autoPlay
           playsInline
           className="w-full max-h-[50vh] object-cover lg:max-h-full rounded-lg shadow-lg bg-black"
         >
-        
-          <source src={videoSrc.replace('.webm','.mp4')} type="video/mp4" />
-          <source src={videoSrc} type="video/webm" />
+          <source src={selectedProject.videoDesktop} type="video/webm" media="(min-width: 769px)" />
+          <source src={selectedProject.videoMobile.replace('.webm', '.mp4')} type="video/mp4" media="(max-width: 768px)" />
+          <source src={selectedProject.videoMobile} type="video/webm" media="(max-width: 768px)" />
+          <source src={selectedProject.videoDesktop} type="video/webm" />
         </video>
       </div>
 

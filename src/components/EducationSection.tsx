@@ -1,6 +1,6 @@
 import { education } from "@/lib/data.tsx";
 import TimelineItem from "./TimelineItem";
-import { Award } from "lucide-react";
+import { Award, Link, FileText } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
@@ -33,27 +33,27 @@ export default function EducationSection({
                   href={edu.pdfPath}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline flex items-center gap-2"
+                  title={t("education.viewProgram")}
                 >
-                  {t(edu.degree as any)}
-                </a>
-              }
+                  {t(edu.degree as any)} <FileText size={14} className="inline-block" />
+            </a>               }
               subtitle={
                 <a
-                  href={edu.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                >
-                  🏛️ {t(edu.institution as any)}
-                </a>
-              }
+                href={edu.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-1"
+                title={t("education.visitWebsite")}
+              >
+                🏛️ {t(edu.institution as any)} <Link size={14} className="inline-block" />
+              </a>              }
               date={`${edu.period}`}
               isLast={index === education.length - 1}
               index={index}
             >
               <p className="text-sm text-muted-foreground mb-3">
-                📍 {edu.location}
+                {edu.location}
               </p>
 
               {edu.achievements && edu.achievements.length > 0 && (

@@ -52,6 +52,8 @@ export const ui = {
 
     // education
     "education.achievements": "Réalisations & Activités",
+    "education.visitWebsite": "Visiter le site web",
+    "education.viewProgram": "Voir les détails du programme",
 
     /**
      * Work Experience
@@ -320,6 +322,8 @@ export const ui = {
 
     // education
     "education.achievements": "Achievements & Activities",
+    "education.visitWebsite": "Visit website",
+    "education.viewProgram": "View program details",
 
     // Work Experience
     "work.laposte.position": "Expert Service Mail Carrier",

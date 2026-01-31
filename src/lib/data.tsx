@@ -93,7 +93,7 @@ export const education = [
   },
   {
     institution: "education.dut.institution",
-    location: "Lannion (29)",
+    location: "Lannion (22)",
     degree: "education.dut.degree",
     period: "2013 - 2015",
     url: "https://formations.univ-rennes.fr/mention/bachelor-universitaire-de-technologie-mention-informatique", // Placeholder URL

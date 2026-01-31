@@ -28,8 +28,26 @@ export default function EducationSection({
           {education.map((edu, index) => (
             <TimelineItem
               key={edu.institution}
-              title={`${t(edu.degree as any)}`}
-              subtitle={`🏛️ ${t(edu.institution as any)}`}
+              title={
+                <a
+                  href={edu.pdfPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {t(edu.degree as any)}
+                </a>
+              }
+              subtitle={
+                <a
+                  href={edu.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  🏛️ {t(edu.institution as any)}
+                </a>
+              }
               date={`${edu.period}`}
               isLast={index === education.length - 1}
               index={index}

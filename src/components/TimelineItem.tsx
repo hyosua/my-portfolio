@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 interface TimelineItemProps {
-  readonly title: string;
-  readonly subtitle: string;
+  readonly title: React.ReactNode;
+  readonly subtitle: React.ReactNode;
   readonly date: string;
   readonly isLast?: boolean;
   readonly index?: number;

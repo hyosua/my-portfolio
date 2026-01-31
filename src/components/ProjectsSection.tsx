@@ -26,6 +26,7 @@ export default function ProjectsSection({
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [videoSrc, setVideoSrc] = useState("");
 
+
   const openModal = (project: any) => {
     setSelectedProject(project);
     // Détecter si mobile ou desktop pour choisir la vidéo appropriée
@@ -162,6 +163,7 @@ export default function ProjectsSection({
           playsInline
           className="w-full max-h-[50vh] object-cover lg:max-h-full rounded-lg shadow-lg bg-black"
         >
+        
           <source src={videoSrc.replace('.webm','.mp4')} type="video/mp4" />
           <source src={videoSrc} type="video/webm" />
         </video>

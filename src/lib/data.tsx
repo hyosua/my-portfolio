@@ -83,6 +83,8 @@ export const education = [
     location: "Evry (91)",
     degree: "education.miaw.degree",
     period: "2025 - Présent",
+    url: "https://www.iut-evry.fr/nos-formations/lp/lp-metiers-de-linformatique-applications-web/", // Placeholder URL
+    pdfPath: "/plaquette-miaw.pdf", // Placeholder PDF path
     achievements: [
       "education.miaw.achievements.1",
       "education.miaw.achievements.2",
@@ -94,6 +96,8 @@ export const education = [
     location: "Lannion (29)",
     degree: "education.dut.degree",
     period: "2013 - 2015",
+    url: "https://formations.univ-rennes.fr/mention/bachelor-universitaire-de-technologie-mention-informatique", // Placeholder URL
+    pdfPath: "/iut-lannion.pdf", // Placeholder PDF path
     achievements: [
       "education.dut.achievements.1",
       "education.dut.achievements.2",

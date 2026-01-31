@@ -298,6 +298,7 @@ export const ui = {
 
     // Specific Labels
     "experience.achievements": "Key Achievements",
+    "hero.role": "Full Stack Developer",
     "hero.description":
     "Former postman turned by **passion**, I’ve kept one obsession: **customer satisfaction**.<br /> To me, a project is managed like a delivery route:<br /> an **organized and meticulous** preparation for a smooth execution with no detours.<br /> Code is just a **tool**.<br /> What truly matters to me? **solving problems**, **learning**, **discovering**.",
     "hero.downloadCv": "Download CV",
@@ -576,6 +577,9 @@ export const ui = {
 
     // Tech Watch
     "veille.readOriginal": "Read the original article",
+    // Liens
+    "projects.viewOnGithub": "View on GitHub",
+    "projects.visitWebsite": "Visit website",
   }
     
 } as const;

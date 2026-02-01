@@ -18,7 +18,7 @@ export const ui = {
     "nav.veille": "Veille",
     "nav.education": "Formation",
     "nav.contact": "Contact",
-    "nav.interests": "Intérêts",
+    "nav.interests": "Loisirs",
 
     // Titres de sections
     "section.experience": "Parcours Professionnel",
@@ -28,7 +28,7 @@ export const ui = {
     "section.awards": "Prix et distinctions",
     "section.contact": "Contact",
     "section.veille": "Veille Technologique",
-    "section.interests": "Centre d'Intérêts",
+    "section.interests": "Loisirs",
     "section.graphism.description": "Transformer des histoires en identités visuelles...",
 
     // Labels spécifiques

@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "./ui/modal";
 import { logos } from "@/lib/data.tsx";
 import {
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
@@ -14,6 +11,23 @@ import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
 import { Info } from "lucide-react";
 import Markdown from "./ui/markdown";
+
+// Simple hook to detect mobile screen size
+const useIsMobile = (query: string = "(max-width: 768px)") => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
+    const handleResize = () => setIsMobile(mediaQuery.matches);
+
+    handleResize(); // Set initial value
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, [query]);
+
+  return isMobile;
+};
 
 export default function GraphismSection({
   lang,
@@ -25,6 +39,8 @@ export default function GraphismSection({
   const [selectedLogo, setSelectedLogo] = useState<any>(null);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showAllLogos, setShowAllLogos] = useState(false);
+  const isMobile = useIsMobile();
 
   const openModal = (logo: any) => {
     setSelectedLogo(logo);
@@ -46,6 +62,8 @@ export default function GraphismSection({
     setSelectedImage(null);
   };
 
+  const displayedLogos = isMobile && !showAllLogos ? logos.slice(0, 3) : logos;
+
   return (
     <section id="graphism" className="py-24 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
@@ -60,7 +78,7 @@ export default function GraphismSection({
         </MotionWrapper>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {logos.map((logo, index) => (
+          {displayedLogos.map((logo, index) => (
             <MotionWrapper key={logo.title} delay={index * 0.1}>
               <div onClick={() => openModal(logo)} className="cursor-pointer">
                 <GlassCard className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl overflow-hidden">
@@ -91,6 +109,16 @@ export default function GraphismSection({
             </MotionWrapper>
           ))}
         </div>
+        {isMobile && !showAllLogos && logos.length > 3 && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAllLogos(true)}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+            >
+              {t("logos.showMore")}
+            </button>
+          </div>
+        )}
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         {selectedLogo && (

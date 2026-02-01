@@ -302,6 +302,7 @@ export const ui = {
     // Ferret
     "logos.ferret.title": "Ferret",
     "logos.ferret.brief": "Le Contexte Ferret est né de la conviction que la **science ne doit pas être une forteresse inaccessible**, mais un **terrain de jeu**. Cette entreprise souhaite transformer la rigueur académique en une **aventure d'exploration**.",
+    "logos.showMore": "Voir plus",
   },
   en: {
     // Head
@@ -640,9 +641,9 @@ export const ui = {
     "logos.aquila.title": "Aquila",
     "logos.aquila.brief": "Aquila is a line of cutting-edge **tactical and protective equipment** designed for **special forces** and **elite units** operating in complex environments. The logo should evoke the ability to **strike with precision**, **speed of execution**, and **resilience** in the face of extreme challenges.",
     // Ferret
-    "logos.ferret.title": "Ferret",
-    "logos.ferret.brief": "The Ferret concept was born from the belief that **science should not be an inaccessible fortress**, but a **playground**. This company aims to transform academic rigor into an **adventure of exploration**.",
-
-  }
-    
-} as const;
+        "logos.ferret.title": "Ferret",
+        "logos.ferret.brief": "The Ferret concept was born from the belief that **science should not be an inaccessible fortress**, but a **playground**. This company aims to transform academic rigor into an **adventure of exploration**.",
+        "logos.showMore": "Show more",
+      }
+        
+    } as const;

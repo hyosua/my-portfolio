@@ -82,7 +82,7 @@ export default function GraphismSection({
                     </div>
                   </div>
                   <CardHeader className="bg-primary/5 border-t border-border/40">
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                    <CardTitle className="text-xl text-center group-hover:text-primary transition-colors duration-300">
                       {logo.title}
                     </CardTitle>
                   </CardHeader>

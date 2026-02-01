@@ -361,4 +361,37 @@ export const logos = [
       "/graphism/logos/pandacare/mockup1.webp",
     ],
   },
+  {
+    title: "Ridefit",
+    brief: "logos.ridefit.brief",
+    sketch: "/graphism/logos/ridefit/sketch.webp",
+    image: "/graphism/logos/ridefit/logo.webp",
+    mockups: [
+      "/graphism/logos/ridefit/mockup1.webp",
+      "/graphism/logos/ridefit/mockup2.webp",
+      "/graphism/logos/ridefit/mockup3.webp",
+    ],
+  },
+  {
+    title: "Aquila",
+    brief: "logos.aquila.brief",
+    sketch: "/graphism/logos/aquila/sketch.webp",
+    image: "/graphism/logos/aquila/logo.webp",
+    mockups: [
+      "/graphism/logos/aquila/mockup1.webp",
+      "/graphism/logos/aquila/mockup2.webp",
+      "/graphism/logos/aquila/mockup3.webp",
+    ],
+  },
+  {
+    title: "Ferret",
+    brief: "logos.ferret.brief",
+    sketch: "/graphism/logos/ferret/sketch.webp",
+    image: "/graphism/logos/ferret/logo.webp",
+    mockups: [
+      "/graphism/logos/ferret/mockup1.webp",
+      "/graphism/logos/ferret/mockup2.webp",
+      "/graphism/logos/ferret/mockup3.webp",
+    ],
+  },
 ];

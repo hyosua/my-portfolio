@@ -293,6 +293,15 @@ export const ui = {
     // Pandacare
     "logos.pandacare.title": "Pandacare",
     "logos.pandacare.brief": "Pandacare est une marque émergente de **'Health Cosmetics'** qui se situe à l'intersection du **soin dermatologique** et du **bien-être naturel**. L'entreprise fournit des produits pour **protéger la peau** du stress et de l'inflammation grâce à des **actifs apaisants** issus de la recherche botanique (comme le bambou ou le cica)",
+    // Ridefit
+    "logos.ridefit.title": "Ridefit",
+    "logos.ridefit.brief": "Ridefit est une marque premium d'**accessoires de cyclisme** conçue exclusivement pour les coureurs professionnels et les **athlètes de haut niveau**. La marque incarne la **performance** et la **précision**. Chaque produit est conçu pour optimiser les **performances**, améliorer le **confort** et offrir une **durabilité** dans les conditions les plus exigeantes.",
+    // Aquila
+    "logos.aquila.title": "Aquila",
+    "logos.aquila.brief": "Aquila est une ligne d'**équipement tactique** et de **protection de pointe**, conçue pour les **forces spéciales** et les **unités d'élite** opérant dans des environnements complexes. Le logo doit évoquer la **capacité à frapper avec précision**, la **rapidité d'exécution** et la **résilience** face aux défis extrêmes.",
+    // Ferret
+    "logos.ferret.title": "Ferret",
+    "logos.ferret.brief": "Le Contexte Ferret est né de la conviction que la **science ne doit pas être une forteresse inaccessible**, mais un **terrain de jeu**. Cette entreprise souhaite transformer la rigueur académique en une **aventure d'exploration**.",
   },
   en: {
     // Head
@@ -622,7 +631,17 @@ export const ui = {
 
     // Pandacare
     "logos.pandacare.title": "Pandacare",
-    "logos.pandacare.brief": "Pandacare is an emerging **'Health Cosmetics'** brand positioned at the intersection of **dermatological care** and **natural wellness**. The company provides products to **protect the skin** from stress and inflammation using **soothing active ingredients** derived from botanical research (such as bamboo or cica)."
+    "logos.pandacare.brief": "Pandacare is an emerging **'Health Cosmetics'** brand positioned at the intersection of **dermatological care** and **natural wellness**. The company provides products to **protect the skin** from stress and inflammation using **soothing active ingredients** derived from botanical research (such as bamboo or cica).",
+
+    // Ridefit
+    "logos.ridefit.title": "Ridefit",
+    "logos.ridefit.brief": "Ridefit is a premium brand of **cycling accessories** designed exclusively for professional riders and **high-level athletes**. The brand embodies **performance** and **precision**. Each product is designed to optimize **performance**, enhance **comfort**, and offer **durability** in the most demanding conditions.",
+    // Aquila
+    "logos.aquila.title": "Aquila",
+    "logos.aquila.brief": "Aquila is a line of cutting-edge **tactical and protective equipment** designed for **special forces** and **elite units** operating in complex environments. The logo should evoke the ability to **strike with precision**, **speed of execution**, and **resilience** in the face of extreme challenges.",
+    // Ferret
+    "logos.ferret.title": "Ferret",
+    "logos.ferret.brief": "The Ferret concept was born from the belief that **science should not be an inaccessible fortress**, but a **playground**. This company aims to transform academic rigor into an **adventure of exploration**.",
 
   }
     

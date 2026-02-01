@@ -9,6 +9,7 @@ import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import VeilleSection from "@/components/VeilleSection";
+import GraphismSection from "@/components/GraphismSection";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { getCollection } from "astro:content";
 
@@ -40,6 +41,7 @@ const articles = filteredArticles.sort(
     <SkillsSection client:visible lang={lang} />
     <ProjectsSection client:visible lang={lang} />
     <EducationSection client:visible lang={lang} />
+    <GraphismSection client:visible lang={lang} />
     <VeilleSection 
       client:visible
       title={t("section.veille")} 

@@ -327,3 +327,38 @@ export const projects = [
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Astro","Shadcn UI"],
   },
 ];
+
+export const logos = [
+  {
+    title: "Coyote",
+    brief: "logos.coyote.brief",
+    sketch: "/graphism/logos/coyote/sketch.jpg",
+    image: "/graphism/logos/coyote/logo.webp",
+    mockups: [
+      "/graphism/logos/coyote/mockup3.webp",
+      "/graphism/logos/coyote/mockup2.webp",
+      "/graphism/logos/coyote/mockup1.webp",
+    ],
+  },
+  {
+    title: "Marco & Monti",
+    brief: "logos.mm.brief",
+    sketch: "",
+    image: "/graphism/logos/mm/logo.png",
+    mockups: [
+      "/graphism/logos/mm/mockup3.webp",
+      "/graphism/logos/mm/mockup2.webp",
+      "/graphism/logos/mm/mockup1.webp",
+    ],
+  },
+  {
+    title: "Pandacare",
+    brief: "logos.pandacare.brief",
+    sketch: "/graphism/logos/pandacare/sketch.webp",
+    image: "/graphism/logos/pandacare/logo.png",
+    mockups: [
+      "/graphism/logos/pandacare/mockup2.webp",
+      "/graphism/logos/pandacare/mockup1.webp",
+    ],
+  },
+];

@@ -89,13 +89,13 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {["experience", "skills", "projects", "education", "veille", "contact"].map(
+          {["experience", "skills", "projects", "education", "interests", "veille", "contact"].map(
             (item, i) => (
               <motion.a
                 key={item}
-                href={`#${item}`}
+                href={`#${item === 'interests' ? 'graphism' : item}`}
                 className={`relative text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
-                  activeSection === item
+                  activeSection === (item === 'interests' ? 'graphism' : item)
                     ? "text-primary font-black scale-110" 
                     : "text-muted-foreground/80 hover:text-foreground"
                 }`}
@@ -105,7 +105,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
                 custom={i + 1}
               >
                 {t(`nav.${item}` as any)}
-                {activeSection === item && (
+                {activeSection === (item === 'interests' ? 'graphism' : item) && (
                   <motion.span 
                     layoutId="activeDot"
                     className="absolute  top-1 -left-2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"
@@ -125,14 +125,14 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
               exit={{ opacity: 0, scale: 0.95 }}
               className="absolute top-full left-4 right-4 mt-4 flex flex-col items-center bg-background/95 backdrop-blur-2xl border border-primary/20 rounded-3xl shadow-2xl md:hidden overflow-hidden"
             >
-              {["experience", "skills", "projects", "education", "veille", "contact"].map(
+              {["experience", "skills", "projects", "education", "interests", "veille", "contact"].map(
                 (item) => (
                   <a
                     key={item}
-                    href={`#${item}`}
+                    href={`#${item === 'interests' ? 'graphism' : item}`}
                     onClick={() => setIsMenuOpen(false)}
                     className={`py-6 w-full text-[10px] tracking-[0.3em] uppercase text-center font-bold border-b border-border/50 last:border-0 transition-all ${
-                      activeSection === item
+                      activeSection === (item === 'interests' ? 'graphism' : item)
                         ? "text-primary bg-primary/5"
                         : "text-muted-foreground"
                     }`}

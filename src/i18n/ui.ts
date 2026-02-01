@@ -18,6 +18,7 @@ export const ui = {
     "nav.veille": "Veille",
     "nav.education": "Formation",
     "nav.contact": "Contact",
+    "nav.interests": "Intérêts",
 
     // Titres de sections
     "section.experience": "Parcours Professionnel",
@@ -27,6 +28,8 @@ export const ui = {
     "section.awards": "Prix et distinctions",
     "section.contact": "Contact",
     "section.veille": "Veille Technologique",
+    "section.interests": "Centre d'Intérêts",
+    "section.graphism.description": "Transformer des histoires en identités visuelles...",
 
     // Labels spécifiques
     "experience.achievements": "Réalisations Clés",
@@ -274,6 +277,22 @@ export const ui = {
 
     //Veille
     "veille.readOriginal": "Lire l'article original",
+    
+    // Logos
+    "logos.brief": "Brief",
+    "logos.sketch": "Croquis",
+    "logos.logo": "Logo",
+    "logos.mockups": "Mises en situation",
+
+    // Coyote
+    "logos.coyote.title": "Coyote",
+    "logos.coyote.brief": "Coyote est une marque de **surf merchandising** inspirée par la **liberté**, l’**océan** et l’**esprit sauvage**. L'idée c'est de retrouver l'esprit du surf originel : **indépendant**, **cool** et **proche de l'océan**. On oublie le côté lisse, on veut quelque chose de **brut**, de **vrai**: qui incarne un mode de vie **nomade**. La liberté **sauvage**, sans artifices...",
+    // Marco&Monti
+    "logos.mm.title": "Marco & Monti",
+    "logos.mm.brief": "Cette marque de **prêt-à-porter de luxe** ne veut pas tomber dans le côté poussiéreux et trop classique habituel. Le concept est de créer un **univers incisif et moderne**. La marque cible des gens qui ont de l'**assurance**: tranchant, propre, minimaliste mais **avec du caractère**. De plus, le logo doit refléter le **luxe intemporel** tout en ayant une **énergie urbaine**, actuelle.",
+    // Pandacare
+    "logos.pandacare.title": "Pandacare",
+    "logos.pandacare.brief": "Pandacare est une marque émergente de **'Health Cosmetics'** qui se situe à l'intersection du **soin dermatologique** et du **bien-être naturel**. L'entreprise fournit des produits pour **protéger la peau** du stress et de l'inflammation grâce à des **actifs apaisants** issus de la recherche botanique (comme le bambou ou le cica)",
   },
   en: {
     // Head
@@ -288,6 +307,7 @@ export const ui = {
     "nav.veille": "Tech Watch",
     "nav.education": "Education",
     "nav.contact": "Contact",
+    "nav.interests": "Interests",
 
     // Section Titles
     "section.experience": "Work Experience",
@@ -297,6 +317,7 @@ export const ui = {
     "section.awards": "Awards & Prizes",
     "section.contact": "Contact",
     "section.veille": "Tech Watch",
+    "section.interests": "Interests",
 
     // Specific Labels
     "experience.achievements": "Key Achievements",
@@ -584,6 +605,25 @@ export const ui = {
     // Liens
     "projects.viewOnGithub": "View on GitHub",
     "projects.visitWebsite": "Visit website",
+
+    // Logos
+    "section.graphism.description": "Transforming stories into visual identities…",
+    "logos.brief": "Brief",
+    "logos.sketch": "Sketch",
+    "logos.logo": "Logo",
+    "logos.mockups": "Mockups",
+
+    // Coyote
+    "logos.coyote.title": "Coyote",
+    "logos.coyote.brief": "Coyote is a **surf merchandising** brand inspired by **freedom**, the **ocean**, and a **wild spirit**. The idea is to capture the essence of original surfing: **independent**, **cool**, and **close to the ocean**. We leave behind the polished side and aim for something **raw, authentic, and real—embodying a nomadic lifestyle**. Wild freedom, without any artifice…",
+    // Marco&Monti
+    "logos.mm.title": "Marco & Monti",
+    "logos.mm.brief": "This **luxury ready-to-wear** brand does not want to fall into the usual dusty and overly classic style. The concept is to create a **sharp and modern universe**. The brand targets people who have **confidence**: crisp, clean, minimalist but **with character**. Moreover, the logo should reflect **timeless luxury** while carrying a **current urban energy**.",
+
+    // Pandacare
+    "logos.pandacare.title": "Pandacare",
+    "logos.pandacare.brief": "Pandacare is an emerging **'Health Cosmetics'** brand positioned at the intersection of **dermatological care** and **natural wellness**. The company provides products to **protect the skin** from stress and inflammation using **soothing active ingredients** derived from botanical research (such as bamboo or cica)."
+
   }
     
 } as const;

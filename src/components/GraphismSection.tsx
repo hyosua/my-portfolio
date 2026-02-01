@@ -9,25 +9,9 @@ import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
+import { useIsMobile } from "@/lib/hooks";
 import { Info } from "lucide-react";
 import Markdown from "./ui/markdown";
-
-// Simple hook to detect mobile screen size
-const useIsMobile = (query: string = "(max-width: 768px)") => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const handleResize = () => setIsMobile(mediaQuery.matches);
-
-    handleResize(); // Set initial value
-    mediaQuery.addEventListener("change", handleResize);
-
-    return () => mediaQuery.removeEventListener("change", handleResize);
-  }, [query]);
-
-  return isMobile;
-};
 
 export default function GraphismSection({
   lang,
@@ -42,10 +26,12 @@ export default function GraphismSection({
   const [showAllLogos, setShowAllLogos] = useState(false);
   const isMobile = useIsMobile();
 
+
   const openModal = (logo: any) => {
     setSelectedLogo(logo);
     setIsModalOpen(true);
   };
+
 
   const closeModal = () => {
     setIsModalOpen(false);

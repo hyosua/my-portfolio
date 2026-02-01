@@ -12,6 +12,7 @@ import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/utils";
+import { useIsMobile } from "@/lib/hooks";
 import { SiGithub } from "react-icons/si";
 import { Info, Link } from "lucide-react";
 import Markdown from "./ui/markdown";
@@ -24,6 +25,8 @@ export default function ProjectsSection({
   const t = useTranslations(lang);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const isMobile = useIsMobile();
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -37,111 +40,141 @@ export default function ProjectsSection({
 
   const handleLinkClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-  }
+  };
+
+  const displayedProjects =
+    isMobile && !showAllProjects ? projects.slice(0, 3) : projects;
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
-  {/* Lueur de fond pour la profondeur */}
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
+      {/* Lueur de fond pour la profondeur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
 
-  <div className="container max-w-4xl mx-auto px-6 md:px-4">
-    <MotionWrapper>
-      <h2 className="text-3xl font-bold tracking-tighter mb-16 text-center md:text-left uppercase bg-clip-text text-transparent bg-linear-to-tr from-foreground to-primary">
-        {t("section.projects")}
-      </h2>
-    </MotionWrapper>
+      <div className="container max-w-4xl mx-auto px-6 md:px-4">
+        <MotionWrapper>
+          <h2 className="text-3xl font-bold tracking-tighter mb-16 text-center md:text-left uppercase bg-clip-text text-transparent bg-linear-to-tr from-foreground to-primary">
+            {t("section.projects")}
+          </h2>
+        </MotionWrapper>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {projects.map((project, index) => (
-        <MotionWrapper key={project.title} delay={index * 0.1}>
-          <div onClick={() => openModal(project)} className="cursor-pointer">
-            <GlassCard className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl  overflow-hidden">
-            <div className="relative overflow-hidden aspect-video">
-              <motion.img
-                src={project.image}
-                alt={t(project.title as any)}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              
-              {/* Overlay Play */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                <div className="
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {displayedProjects.map((project, index) => (
+            <MotionWrapper key={project.title} delay={index * 0.1}>
+              <div
+                onClick={() => openModal(project)}
+                className="cursor-pointer"
+              >
+                <GlassCard className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl  overflow-hidden">
+                  <div className="relative overflow-hidden aspect-video">
+                    <motion.img
+                      src={project.image}
+                      alt={t(project.title as any)}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+
+                    {/* Overlay Play */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                      <div
+                        className="
                   bg-primary/90 p-3 rounded-full text-white shadow-xl
                   hidden md:block
                   /* Sur desktop (md:) : caché par défaut, apparaît au survol */
                   md:opacity-0 md:scale-90 md:group-hover:opacity-100 md:group-hover:scale-100 
                   transition-all duration-300
-                ">
-                  <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
+                "
+                      >
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div className="absolute top-3 right-3 z-10">
+                    <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-background/80 backdrop-blur-md border border-border text-[10px] font-bold uppercase text-muted-foreground shadow-sm">
+                      <Info size={16} className="text-primary" />
+                      {t("projects.details")}
+                    </div>
+                  </div>
+
+                  <CardHeader className="bg-primary/5 border-b border-border/40">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                      {t(project.title as any)}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="flex-1 pt-6">
+                    <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">
+                      <Markdown
+                        content={t(project.description[0] as any)}
+                      />
+                    </CardDescription>
+                    <div className="flex flex-wrap gap-2 mt-6">
+                      {project.tags.map((tag: string) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="flex gap-6 items-center border-t border-border/40 bg-primary/5 py-4">
+                    <motion.a
+                      href={project.github}
+                      onClick={handleLinkClick}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-xs font-medium text-muted-foreground hover:text-primary transition-colors group/link"
+                      whileHover={{ x: 1 }}
+                    >
+                      <SiGithub
+                        size={16}
+                        className="mr-2 group-hover/link:rotate-12 transition-transform"
+                      />
+                      {t("projects.viewOnGithub")}
+                    </motion.a>
+
+                    {project.website && (
+                      <motion.a
+                        href={project.website}
+                        onClick={handleLinkClick}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-xs font-medium text-muted-foreground hover:text-primary transition-colors group/link"
+                        whileHover={{ x: 1 }}
+                      >
+                        <Link
+                          size={16}
+                          className="mr-2 group-hover/link:-rotate-12 transition-transform"
+                        />
+                        {t("projects.visitWebsite")}
+                      </motion.a>
+                    )}
+                  </CardFooter>
+                </GlassCard>
               </div>
-            </div>
-
-            <div className="absolute top-3 right-3 z-10">
-              <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-background/80 backdrop-blur-md border border-border text-[10px] font-bold uppercase text-muted-foreground shadow-sm">
-                <Info size={16} className="text-primary" />
-                {t("projects.details")}
-              </div>
-            </div>
-
-            <CardHeader className="bg-primary/5 border-b border-border/40">
-              <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
-                {t(project.title as any)}
-              </CardTitle>
-            </CardHeader>
-
-            <CardContent className="flex-1 pt-6">
-              <CardDescription className="text-sm leading-relaxed text-muted-foreground/90">
-                <Markdown content={t(project.description[0] as any)} />
-              </CardDescription>
-              <div className="flex flex-wrap gap-2 mt-6">
-                {project.tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-
-            <CardFooter className="flex gap-6 items-center border-t border-border/40 bg-primary/5 py-4">
-              <motion.a
-                href={project.github}
-                onClick={handleLinkClick}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-xs font-medium text-muted-foreground hover:text-primary transition-colors group/link"
-                whileHover={{ x: 1 }}
-              >
-                <SiGithub size={16} className="mr-2 group-hover/link:rotate-12 transition-transform" />
-                {t("projects.viewOnGithub")}
-              </motion.a>
-              
-              {project.website && (
-                <motion.a
-                  href={project.website}
-                  onClick={handleLinkClick}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-xs font-medium text-muted-foreground hover:text-primary transition-colors group/link"
-                  whileHover={{ x: 1 }}
-                >
-                  <Link size={16} className="mr-2 group-hover/link:-rotate-12 transition-transform" />
-                  {t("projects.visitWebsite")}
-                </motion.a>
-              )}
-            </CardFooter>
-          </GlassCard>
+            </MotionWrapper>
+          ))}
         </div>
-        </MotionWrapper>
-      ))}
-    </div>
-  </div>
+        {isMobile && !showAllProjects && projects.length > 3 && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAllProjects(true)}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+            >
+              {t("logos.showMore")}
+            </button>
+          </div>
+        )}
+      </div>
   <Modal isOpen={isModalOpen} onClose={closeModal}>
     {selectedProject && (
     <div className="flex flex-col gap-6 max-h-[85vh] overflow-y-auto p-2 scrollbar-thin">

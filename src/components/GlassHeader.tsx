@@ -94,6 +94,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
               <motion.a
                 key={item}
                 href={`#${item === 'interests' ? 'graphism' : item}`}
+                aria-current={activeSection === (item === 'interests' ? 'graphism' : item) ? "page" : undefined}
                 className={`relative text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
                   activeSection === (item === 'interests' ? 'graphism' : item)
                     ? "text-primary font-black scale-110" 
@@ -116,10 +117,10 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
           )}
         </div>
 
-        {/* Mobile Nav (Update colors here too) */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -146,9 +147,10 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
         </AnimatePresence>
 
         <div className="flex items-center gap-4">
-          <div className="flex gap-3 border-r border-border/60 pr-4 mr-1">
+          <nav aria-label="Language selection" className="flex gap-3 border-r border-border/60 pr-4 mr-1">
             <a
               href="/"
+              aria-current={lang === "fr" ? "page" : undefined}
               className={`text-[10px] font-black transition-colors ${
                 lang === "fr" ? "text-primary" : "text-muted-foreground/30 hover:text-muted-foreground"
               }`}
@@ -157,13 +159,14 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
             </a>
             <a
               href="/en/"
+              aria-current={lang === "en" ? "page" : undefined}
               className={`text-[10px] font-black transition-colors ${
                 lang === "en" ? "text-primary" : "text-muted-foreground/30 hover:text-muted-foreground"
               }`}
             >
               EN
             </a>
-          </div>
+          </nav>
 
           <div className="hover:scale-110 transition-transform">
             <ThemeToggle lang={lang} />
@@ -173,6 +176,8 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
             className="md:hidden text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={t("common.menu" as any)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

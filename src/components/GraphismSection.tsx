@@ -66,7 +66,19 @@ export default function GraphismSection({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedLogos.map((logo, index) => (
             <MotionWrapper key={logo.title} delay={index * 0.1}>
-              <div onClick={() => openModal(logo)} className="cursor-pointer">
+              <div 
+                onClick={() => openModal(logo)} 
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(logo);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`${t("projects.view_details" as any)} ${logo.title}`}
+                className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+              >
                 <GlassCard className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl overflow-hidden">
                   <div className="relative overflow-hidden aspect-square">
                     <motion.img

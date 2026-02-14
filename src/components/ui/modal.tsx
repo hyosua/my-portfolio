@@ -54,6 +54,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, isImage = fals
       )}
     >
       <div
+        role="dialog"
+        aria-modal="true"
         className={cn(
           "relative animate-in fade-in zoom-in duration-200",
           {

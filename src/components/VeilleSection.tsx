@@ -67,7 +67,8 @@ return (
             <MotionWrapper key={article.id} delay={index * 0.1}>
               <button
                 onClick={() => openModal(article)}
-                className="group/card cursor-pointer h-full flex w-full text-left"
+                aria-label={`${t("projects.view_details" as any)} ${article.data.title}`}
+                className="group/card cursor-pointer h-full flex w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
               >
                 <GlassCard className="overflow-hidden border-border/50 transition-all duration-500 
                                      group-hover/card:border-primary/40 

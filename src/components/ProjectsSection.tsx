@@ -62,7 +62,16 @@ export default function ProjectsSection({
             <MotionWrapper key={project.title} delay={index * 0.1}>
               <div
                 onClick={() => openModal(project)}
-                className="cursor-pointer"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(project);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`${t("projects.view_details" as any)} ${t(project.title as any)}`}
+                className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
               >
                 <GlassCard className="group h-full flex flex-col border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl  overflow-hidden">
                   <div className="relative overflow-hidden aspect-video">

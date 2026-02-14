@@ -71,7 +71,7 @@ export default function GraphismSection({
                   <div className="relative overflow-hidden aspect-square">
                     <motion.img
                       src={logo.image}
-                      alt={t(logo.title as any)}
+                      alt={logo.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/10">

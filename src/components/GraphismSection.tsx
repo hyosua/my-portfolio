@@ -106,7 +106,7 @@ export default function GraphismSection({
           </div>
         )}
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <Modal isOpen={isModalOpen} onClose={closeModal} closeLabel={t("common.close" as any)}>
         {selectedLogo && (
           <div className="flex flex-col gap-6 max-h-[85vh] overflow-y-auto p-2 scrollbar-thin">
             <h3 className="text-2xl font-bold mb-2 text-primary">{selectedLogo.title}</h3>
@@ -162,7 +162,7 @@ export default function GraphismSection({
       </Modal>
 
       {/* Image Fullscreen Modal */}
-      <Modal isOpen={isImageModalOpen} onClose={closeImageModal} isImage={true}>
+      <Modal isOpen={isImageModalOpen} onClose={closeImageModal} isImage={true} closeLabel={t("common.close" as any)}>
         {selectedImage && (
           <div 
             className="relative flex items-center justify-center w-full h-full" 

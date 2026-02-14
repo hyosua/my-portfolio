@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/teko": "^5.2.7",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.14",

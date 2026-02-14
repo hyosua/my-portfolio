@@ -175,7 +175,7 @@ export default function ProjectsSection({
           </div>
         )}
       </div>
-  <Modal isOpen={isModalOpen} onClose={closeModal}>
+  <Modal isOpen={isModalOpen} onClose={closeModal} closeLabel={t("common.close" as any)}>
     {selectedProject && (
     <div className="flex flex-col gap-6 max-h-[85vh] overflow-y-auto p-2 scrollbar-thin">
       

@@ -7,9 +7,10 @@ interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
   isImage?: boolean;
+  closeLabel?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, isImage = false }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, isImage = false, closeLabel = "Close" }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -67,6 +68,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, isImage = fals
         
         <button
           onClick={onClose}
+          aria-label={closeLabel}
           className={cn("absolute transition-all", {
             "top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white": !isImage,
             "top-2 right-2 md:top-0 md:right-12 text-white hover:scale-110": isImage,

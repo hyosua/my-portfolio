@@ -172,6 +172,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
           <button
             className="md:hidden text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={t("common.menu" as any)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

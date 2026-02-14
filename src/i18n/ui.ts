@@ -7,6 +7,9 @@ export const defaultLang = "fr";
 
 export const ui = {
   fr: {
+    // Common
+    "common.close": "Fermer",
+    "common.menu": "Menu",
     // Head
     "head.description":
       "Développeur full-stack passionné. Mes technos favorites: JavaScript(React, Typescript, Nextjs,Nodejs), Python, Mongodb, socket-io, postgresql...",
@@ -305,6 +308,9 @@ export const ui = {
     "logos.showMore": "Voir plus",
   },
   en: {
+    // Common
+    "common.close": "Close",
+    "common.menu": "Menu",
     // Head
     "head.description":
       "Passionate full-stack developer. My favorite technologies: JavaScript (React, Typescript, Next.js, Node.js), Python, MongoDB, socket-io, PostgreSQL...",

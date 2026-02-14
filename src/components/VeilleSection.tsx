@@ -119,7 +119,7 @@ return (
 
       {/* MODAL - Nettoyage des couleurs purple */}
       {selectedArticle && (
-        <Modal isOpen={!!selectedArticle} onClose={closeModal}>
+        <Modal isOpen={!!selectedArticle} onClose={closeModal} closeLabel={t("common.close" as any)}>
           <div className="prose dark:prose-invert max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-foreground">
               {selectedArticle.data.title}

@@ -1,9 +1,11 @@
 import { Moon, Sun } from "lucide-react";
 import { Button } from "./button";
 import { useEffect, useState } from "react";
+import { useTranslations } from "@/i18n/utils";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ lang }: { readonly lang: "fr" | "en" }) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
@@ -30,7 +32,7 @@ export default function ThemeToggle() {
       ) : (
         <Sun className="h-5 w-5" />
       )}
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">{t("common.themeToggle" as any)}</span>
     </Button>
   );
 }

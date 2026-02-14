@@ -166,7 +166,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
           </div>
 
           <div className="hover:scale-110 transition-transform">
-            <ThemeToggle />
+            <ThemeToggle lang={lang} />
           </div>
 
           <button

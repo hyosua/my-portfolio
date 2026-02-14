@@ -10,6 +10,7 @@ export const ui = {
     // Common
     "common.close": "Fermer",
     "common.menu": "Menu",
+    "common.themeToggle": "Changer le thème",
     // Head
     "head.description":
       "Développeur full-stack passionné. Mes technos favorites: JavaScript(React, Typescript, Nextjs,Nodejs), Python, Mongodb, socket-io, postgresql...",
@@ -311,6 +312,7 @@ export const ui = {
     // Common
     "common.close": "Close",
     "common.menu": "Menu",
+    "common.themeToggle": "Toggle theme",
     // Head
     "head.description":
       "Passionate full-stack developer. My favorite technologies: JavaScript (React, Typescript, Next.js, Node.js), Python, MongoDB, socket-io, PostgreSQL...",

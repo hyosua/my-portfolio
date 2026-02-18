@@ -13,7 +13,7 @@ export const ui = {
     "common.themeToggle": "Changer le thème",
     // Head
     "head.description":
-      "Développeur full-stack passionné. Mes technos favorites: JavaScript(React, Typescript, Nextjs,Nodejs), Python, Mongodb, socket-io, postgresql...",
+      "Développeur full-stack passionné. Mes technos favorites: JavaScript(React, Typescript, Nextjs, Nodejs), Laravel, Python, Mongodb, socket-io, postgresql...",
     // Navigation
     "nav.experience": "Expérience",
     "nav.projects": "Projets",
@@ -315,7 +315,7 @@ export const ui = {
     "common.themeToggle": "Toggle theme",
     // Head
     "head.description":
-      "Passionate full-stack developer. My favorite technologies: JavaScript (React, Typescript, Next.js, Node.js), Python, MongoDB, socket-io, PostgreSQL...",
+      "Passionate full-stack developer. My favorite technologies: JavaScript (React, Typescript, Next.js, Node.js), Laravel, Python, MongoDB, socket-io, PostgreSQL...",
 
     // Navigation
     "nav.experience": "Experience",

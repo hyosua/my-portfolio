@@ -13,6 +13,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPhp,
+  SiLaravel,
   SiPostgresql,
   SiPython,
   SiReact,
@@ -123,6 +124,7 @@ export const skills = {
     { name: "Express", icon: <SiExpress /> },
     { name: "Python", icon: <SiPython /> },
     { name: "PHP", icon: <SiPhp /> },
+    { name: "Laravel", icon: <SiLaravel /> },
   ],
   databaseAndStorage: [
     { name: "PostgreSQL", icon: <SiPostgresql /> },

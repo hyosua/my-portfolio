@@ -72,12 +72,13 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
 
   const logoSrc = isDarkMode ? "/logo/hc-logo-w.png" : "/logo/hc-logo-b.png";
   const logoAlt = personalInfo.name; // Use personalInfo.name as alt text
+  const homeUrl = lang === "fr" ? "/" : "/en/";
 
   return (
     <header className="fixed top-4 w-full z-50 px-4">
       <nav className="max-w-4xl mx-auto backdrop-blur-xl bg-background/70 border border-border/50 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl shadow-primary/5">
         <motion.a
-          href={lang === "fr" ? "/" : "/en/"}
+          href={homeUrl}
           initial="hidden"
           animate="visible"
           variants={blurVariant}
@@ -93,7 +94,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
             (item, i) => (
               <motion.a
                 key={item}
-                href={`#${item === 'interests' ? 'graphism' : item}`}
+                href={`${homeUrl}#${item === 'interests' ? 'graphism' : item}`}
                 aria-current={activeSection === (item === 'interests' ? 'graphism' : item) ? "page" : undefined}
                 className={`relative text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
                   activeSection === (item === 'interests' ? 'graphism' : item)
@@ -130,7 +131,7 @@ export default function GlassHeader({ lang }: { readonly lang: "fr" | "en" }) {
                 (item) => (
                   <a
                     key={item}
-                    href={`#${item === 'interests' ? 'graphism' : item}`}
+                    href={`${homeUrl}#${item === 'interests' ? 'graphism' : item}`}
                     onClick={() => setIsMenuOpen(false)}
                     className={`py-6 w-full text-[10px] tracking-[0.3em] uppercase text-center font-bold border-b border-border/50 last:border-0 transition-all ${
                       activeSection === (item === 'interests' ? 'graphism' : item)

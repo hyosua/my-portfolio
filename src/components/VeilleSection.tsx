@@ -32,10 +32,12 @@ function VeilleSection({
   title,
   lang,
   articles,
+  showMoreButton = false,
 }: {
   readonly title: string;
   readonly lang: "fr" | "en";
   readonly articles: VeilleArticle[];
+  readonly showMoreButton?: boolean;
 }) {
   const [selectedArticle, setSelectedArticle] = useState<VeilleArticle | null>(
     null
@@ -52,6 +54,8 @@ function VeilleSection({
   marked.setOptions({
     breaks: true,
   }); 
+
+  const veilleUrl = lang === "fr" ? "/veille" : `/${lang}/veille`;
 
 return (
     <section id="veille" className="py-24 relative overflow-hidden">
@@ -116,6 +120,19 @@ return (
             </MotionWrapper>
           ))}
         </div>
+
+        {showMoreButton && (
+          <div className="mt-16 flex justify-center">
+            <MotionWrapper delay={0.2}>
+              <a
+                href={veilleUrl}
+                className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg transition-all hover:scale-105 hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                {t("veille.showMore")}
+              </a>
+            </MotionWrapper>
+          </div>
+        )}
       </div>
 
       {/* MODAL - Nettoyage des couleurs purple */}

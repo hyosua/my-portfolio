@@ -1,19 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import GlassHeader from "@/components/GlassHeader";
-import HeroSection from "@/components/HeroSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import EducationSection from "@/components/EducationSection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import VeilleSection from "@/components/VeilleSection";
-import GraphismSection from "@/components/GraphismSection";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { getCollection } from "astro:content";
+import { ChevronLeft } from "lucide-react";
 
-// indique à Astro de générer "/" (fr) et "/en" (en)
 export function getStaticPaths() {
   return [
     { params: { lang: undefined } }, // racine (fr)
@@ -31,25 +24,30 @@ const filteredArticles = allVeille.filter((article) =>
 const articles = filteredArticles.sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+
+const homeUrl = lang === "fr" ? "/" : `/${lang}/`;
 ---
 
 <Layout lang={lang} description={t("head.description")}>
   <GlassHeader client:load lang={lang} />
-  <main class="min-h-screen">
-    <HeroSection client:load lang={lang} />
-    <ExperienceSection client:visible lang={lang} />
-    <SkillsSection client:visible lang={lang} />
-    <ProjectsSection client:visible lang={lang} />
-    <EducationSection client:visible lang={lang} />
-    <GraphismSection client:visible lang={lang} />
+  <main class="min-h-screen pt-32 pb-24">
+    <div class="container max-w-4xl mx-auto px-6 md:px-4 mb-8">
+      <a 
+        href={homeUrl} 
+        class="inline-flex items-center text-sm font-bold text-primary hover:opacity-70 transition-all uppercase tracking-widest"
+      >
+        <ChevronLeft class="mr-2" size={20} />
+        {t("veille.back")}
+      </a>
+    </div>
+
     <VeilleSection 
-      client:visible
+      client:load
       title={t("section.veille")} 
       lang={lang} 
-      articles={articles.slice(0, 3)}
-      showMoreButton={articles.length > 3}
-      />
-    <ContactSection client:visible lang={lang} />
+      articles={articles}
+      showMoreButton={false}
+    />
   </main>
   <Footer client:visible />
 </Layout>

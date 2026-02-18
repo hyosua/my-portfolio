@@ -281,6 +281,8 @@ export const ui = {
 
     //Veille
     "veille.readOriginal": "Lire l'article original",
+    "veille.showMore": "Voir tous les articles",
+    "veille.back": "Retour à l'accueil",
     
     // Logos
     "logos.brief": "Brief",
@@ -620,6 +622,8 @@ export const ui = {
 
     // Tech Watch
     "veille.readOriginal": "Read the original article",
+    "veille.showMore": "View all articles",
+    "veille.back": "Back to home",
     // Liens
     "projects.viewOnGithub": "View on GitHub",
     "projects.visitWebsite": "Visit website",

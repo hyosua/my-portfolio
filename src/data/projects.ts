@@ -1,5 +1,43 @@
 export const projects = [
   {
+    title: "projects.hellmet.title",
+    github: "https://github.com/hyosua/hellmet",
+    description: [
+      "projects.hellmet.description.1",
+      "projects.hellmet.description.2",
+    ],
+    image: "/hellmet.png",
+    website: "https://cadavrexquis.fr",
+    videoDesktop: "/videos/hellmet-c.mp4",
+    videoMobile: "/videos/hellmet-c.mp4",
+    context: "projects.hellmet.context",
+    results: [
+      "projects.hellmet.results.1",
+      "projects.hellmet.results.2",
+      "projects.hellmet.results.3",
+    ],
+    achievements: [
+      "projects.hellmet.achievements.1",
+      "projects.hellmet.achievements.2",
+      "projects.hellmet.achievements.3",
+      "projects.hellmet.achievements.4",
+    ],
+    stackChoices: [
+      "projects.hellmet.stack.1",
+      "projects.hellmet.stack.2",
+      "projects.hellmet.stack.3",
+      "projects.hellmet.stack.4",
+      "projects.hellmet.stack.5",
+      "projects.hellmet.stack.6",
+    ],
+    challenges: [
+      "projects.hellmet.challenges.1",
+      "projects.hellmet.challenges.2",
+      "projects.hellmet.challenges.3",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Groq API", "Jest", "React"],
+  },
+  {
     title: "projects.cexquis.title",
     github: "https://github.com/hyosua/cadavre-exquis",
     description: [

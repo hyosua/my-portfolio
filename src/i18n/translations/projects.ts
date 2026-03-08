@@ -13,6 +13,47 @@ export const projects = {
     "projects.viewOnGithub": "Voir sur GitHub",
     "projects.visitWebsite": "Visiter le site",
 
+    // Hellmet
+    "projects.hellmet.title": "Hellmet",
+    "projects.hellmet.description.1":
+      "Analyseur statique de vulnérabilités de code basé sur l'**OWASP Top 10 (2025)**.",
+    "projects.hellmet.description.2":
+      "Next.js, TypeScript, React, Tailwind CSS, Groq API",
+    "projects.hellmet.context":
+      "Outil d'**audit de sécurité** pour snippets de code générés par IA. Détecte les vulnérabilités, les nomme avec précision selon l'OWASP, et génère un **prompt XML structuré** à réinjecter dans le LLM pour obtenir un correctif ciblé.",
+    "projects.hellmet.stack.1":
+      "**Next.js** & **React**: Framework performant, rendu hybride, routing intégré",
+    "projects.hellmet.stack.2":
+      "**TypeScript**: Mode strict pour une détection d'erreurs maximale dès le développement",
+    "projects.hellmet.stack.3":
+      "**Moteur regex client-side**: Toute l'analyse principale s'exécute dans le navigateur, sans appel serveur",
+    "projects.hellmet.stack.4":
+      "**Groq SDK** (Llama 3.3 70B): Enrichissement optionnel des prompts par LLM pour des contraintes de sécurité plus précises",
+    "projects.hellmet.stack.5":
+      "**API OSV.dev**: Détection des dépendances vulnérables (SCA) via un référentiel de CVEs en temps réel",
+    "projects.hellmet.stack.6":
+      "**Jest** & **Testing Library**: Suite de 74 tests unitaires et de composants",
+    "projects.hellmet.achievements.1":
+      "**Détection de 19 patterns** de vulnérabilités couvrant les catégories OWASP A01 à A10 (injections SQL/DOM, secrets hardcodés, mauvaises configs CORS, JWT sans expiration...)",
+    "projects.hellmet.achievements.2":
+      "**Génération de prompts XML** structurés avec code original, contraintes OWASP triées par sévérité et instructions ciblées pour le LLM",
+    "projects.hellmet.achievements.3":
+      "**Prompt Builder** avec détection automatique de langage (11 langages) et de domaine (auth, api, upload...) pour construire un prompt sécurisé avant même d'écrire le code",
+    "projects.hellmet.achievements.4":
+      "**Analyse SCA** des dépendances via OSV.dev pour détecter les packages vulnérables",
+    "projects.hellmet.challenges.1":
+      "Conception de **patterns regex** robustes couvrant plusieurs langages et frameworks sans générer trop de faux positifs",
+    "projects.hellmet.challenges.2":
+      "**Architecture entièrement client-side** pour l'analyse principale: pas de serveur, pas de latence, pas de fuite de code",
+    "projects.hellmet.challenges.3":
+      "**Analyse SCA côté client**: parsing des fichiers de dépendances (package.json) puis fetch vers l'**API OSV.dev** directement depuis le navigateur pour récupérer les CVEs associés",
+    "projects.hellmet.results.1":
+      "Montée en compétence approfondie sur la **sécurité web** et l'**OWASP Top 10**",
+    "projects.hellmet.results.2":
+      "Apprentissage de l'**intégration d'APIs LLM** (Groq) et de la construction de prompts structurés",
+    "projects.hellmet.results.3":
+      "Mise en place d'une **suite de tests** complète couvrant la logique métier et les composants UI",
+
     // Cadavre Exquis
     "projects.cexquis.title": "Cadavre Exquis",
     "projects.cexquis.description.1":
@@ -200,6 +241,47 @@ export const projects = {
     "projects.scroll_more": "Scroll to learn more",
     "projects.viewOnGithub": "View on GitHub",
     "projects.visitWebsite": "Visit website",
+
+    // Hellmet
+    "projects.hellmet.title": "hellmet",
+    "projects.hellmet.description.1":
+      "Static code vulnerability analyzer based on **OWASP Top 10 (2025)**.",
+    "projects.hellmet.description.2":
+      "Next.js, TypeScript, React, Tailwind CSS, Groq API",
+    "projects.hellmet.context":
+      "A **security audit tool** for AI-generated code snippets. Detects vulnerabilities, names them precisely using OWASP, and generates a **structured XML prompt** to feed back into the LLM for a targeted fix.",
+    "projects.hellmet.stack.1":
+      "**Next.js** & **React**: Performant framework, hybrid rendering, built-in routing",
+    "projects.hellmet.stack.2":
+      "**TypeScript**: Strict mode for maximum error detection during development",
+    "projects.hellmet.stack.3":
+      "**Client-side regex engine**: All core analysis runs in the browser with no server calls",
+    "projects.hellmet.stack.4":
+      "**Groq SDK** (Llama 3.3 70B): Optional AI enrichment of prompts for more precise security constraints",
+    "projects.hellmet.stack.5":
+      "**OSV.dev API**: Detection of vulnerable dependencies (SCA) via a real-time CVE registry",
+    "projects.hellmet.stack.6":
+      "**Jest** & **Testing Library**: Suite of unit and component tests",
+    "projects.hellmet.achievements.1":
+      "**Detection of 19 vulnerability patterns** covering OWASP categories A01 to A10 (SQL/DOM injections, hardcoded secrets, CORS misconfigurations, JWTs without expiry...)",
+    "projects.hellmet.achievements.2":
+      "**XML prompt generation** with the original code, OWASP constraints sorted by severity, and targeted LLM instructions",
+    "projects.hellmet.achievements.3":
+      "**Prompt Builder** with automatic language detection (11 languages) and domain detection (auth, api, upload...) to build a secure prompt before writing any code",
+    "projects.hellmet.achievements.4":
+      "**SCA dependency analysis** via OSV.dev to detect vulnerable packages",
+    "projects.hellmet.challenges.1":
+      "Designing **robust regex patterns** covering multiple languages and frameworks without generating too many false positives",
+    "projects.hellmet.challenges.2":
+      "**Fully client-side architecture** for core analysis: no server, no latency, no code leakage",
+    "projects.hellmet.challenges.3":
+      "**Client-side SCA analysis**: parsing dependency files (package.json) then fetching the **OSV.dev API** directly from the browser to retrieve associated CVEs",
+    "projects.hellmet.results.1":
+      "Deep skill growth in **web security** and the **OWASP Top 10**",
+    "projects.hellmet.results.2":
+      "Learning **LLM API integration** (Groq) and structured prompt engineering",
+    "projects.hellmet.results.3":
+      "Setting up a comprehensive **test suite** (74 tests) covering business logic and UI components",
 
     // Exquisite Corpse
     "projects.cexquis.title": "Exquisite Corpse",

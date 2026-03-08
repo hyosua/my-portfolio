@@ -20,7 +20,7 @@ export const projects = {
     "projects.hellmet.description.2":
       "Next.js, TypeScript, React, Tailwind CSS, Groq API",
     "projects.hellmet.context":
-      "Outil d'**audit de sécurité** pour snippets de code générés par IA. Détecte les vulnérabilités, les nomme avec précision selon l'OWASP, et génère un **prompt XML structuré** à réinjecter dans le LLM pour obtenir un correctif ciblé.",
+      "Outil d'**audit de sécurité** pour snippets de code. Détecte les vulnérabilités, les nomme avec précision selon l'[OWASP Top 10](https://owasp.org/www-project-top-ten/), et **génère directement la correction du code**.",
     "projects.hellmet.stack.1":
       "**Next.js** & **React**: Framework performant, rendu hybride, routing intégré",
     "projects.hellmet.stack.2":
@@ -249,7 +249,7 @@ export const projects = {
     "projects.hellmet.description.2":
       "Next.js, TypeScript, React, Tailwind CSS, Groq API",
     "projects.hellmet.context":
-      "A **security audit tool** for AI-generated code snippets. Detects vulnerabilities, names them precisely using OWASP, and generates a **structured XML prompt** to feed back into the LLM for a targeted fix.",
+      "A **security audit tool** for code snippets. Detects vulnerabilities, names them precisely using the [OWASP Top 10](https://owasp.org/www-project-top-ten/), and **directly generates the corrected code**.",
     "projects.hellmet.stack.1":
       "**Next.js** & **React**: Performant framework, hybrid rendering, built-in routing",
     "projects.hellmet.stack.2":

@@ -7,7 +7,7 @@ export const projects = [
       "projects.hellmet.description.2",
     ],
     image: "/hellmet.png",
-    website: "https://cadavrexquis.fr",
+    website: "https://hellmet.vercel.app/",
     videoDesktop: "/videos/hellmet-c.mp4",
     videoMobile: "/videos/hellmet-c.mp4",
     context: "projects.hellmet.context",

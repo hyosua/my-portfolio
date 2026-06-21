@@ -2,6 +2,17 @@ export const experience = {
   fr: {
     "experience.achievements": "Réalisations Clés",
 
+    // Trinexta
+    "work.trinexta.position": "Tech Lead",
+    "work.trinexta.achievements.1":
+      "**Architecture** et choix techniques de la plateforme",
+    "work.trinexta.achievements.2":
+      "**Encadrement** et montée en compétences de l'équipe de développement",
+    "work.trinexta.achievements.3":
+      "Mise en place des **bonnes pratiques** (code review, CI/CD, tests automatisés)",
+    "work.trinexta.achievements.4":
+      "**Pilotage de la delivery** et coordination avec les équipes produit",
+
     // La Poste
     "work.laposte.position": "Facteur Service Expert",
     "work.laposte.achievements.1":
@@ -39,6 +50,17 @@ export const experience = {
   },
   en: {
     "experience.achievements": "Key Achievements",
+
+    // Trinexta
+    "work.trinexta.position": "Tech Lead",
+    "work.trinexta.achievements.1":
+      "**Architecture** and technical decision-making for the platform",
+    "work.trinexta.achievements.2":
+      "**Team management** and developer skill development",
+    "work.trinexta.achievements.3":
+      "Implementation of **best practices** (code review, CI/CD, automated testing)",
+    "work.trinexta.achievements.4":
+      "**Delivery management** and coordination with product teams",
 
     // La Poste
     "work.laposte.position": "Expert Service Mail Carrier",

@@ -1,5 +1,17 @@
 export const workExperience = [
   {
+    company: "Trinexta",
+    location: "Évry (91)",
+    position: "work.trinexta.position",
+    period: "Mar 2026 - Présent",
+    achievements: [
+      "work.trinexta.achievements.1",
+      "work.trinexta.achievements.2",
+      "work.trinexta.achievements.3",
+      "work.trinexta.achievements.4",
+    ],
+  },
+  {
     company: "La Poste",
     location: "Yerres (91)",
     position: "work.laposte.position",

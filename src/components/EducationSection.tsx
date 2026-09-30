@@ -29,6 +29,7 @@ export default function EducationSection({
             <TimelineItem
               key={edu.institution}
               title={
+                edu.pdfPath ? (
                 <a
                   href={edu.pdfPath}
                   target="_blank"
@@ -37,7 +38,11 @@ export default function EducationSection({
                   title={t("education.viewProgram")}
                 >
                   {t(edu.degree as any)} <FileText size={14} className="inline-block" />
-            </a>               }
+                </a>
+                ) : (
+                  <span>{t(edu.degree as any)}</span>
+                )
+              }
               subtitle={
                 <a
                 href={edu.url}

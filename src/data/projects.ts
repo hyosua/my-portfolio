@@ -1,5 +1,38 @@
 export const projects = [
   {
+    title: "projects.trinexta.title",
+    website: "https://trinexta.fr",
+    description: [
+      "projects.trinexta.description.1",
+      "projects.trinexta.description.2",
+    ],
+    image: "/trinexta-desktop.png",
+    context: "projects.trinexta.context",
+    results: [
+      "projects.trinexta.results.1",
+      "projects.trinexta.results.2",
+      "projects.trinexta.results.3",
+    ],
+    achievements: [
+      "projects.trinexta.achievements.1",
+      "projects.trinexta.achievements.2",
+      "projects.trinexta.achievements.3",
+      "projects.trinexta.achievements.4",
+    ],
+    stackChoices: [
+      "projects.trinexta.stack.1",
+      "projects.trinexta.stack.2",
+      "projects.trinexta.stack.3",
+      "projects.trinexta.stack.4",
+    ],
+    challenges: [
+      "projects.trinexta.challenges.1",
+      "projects.trinexta.challenges.2",
+      "projects.trinexta.challenges.3",
+    ],
+    tags: ["Next.js", "TypeScript", "Sanity", "Prisma", "PostgreSQL", "GitHub Actions"],
+  },
+  {
     title: "projects.hellmet.title",
     github: "https://github.com/hyosua/hellmet",
     description: [

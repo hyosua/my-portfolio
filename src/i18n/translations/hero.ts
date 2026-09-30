@@ -1,8 +1,8 @@
 export const hero = {
   fr: {
-    "hero.role": "Tech Lead",
+    "hero.role": "Responsable Technique",
     "hero.description":
-      "Ancien facteur reconverti par **passion**, aujourd'hui **Tech Lead**, j'ai gardé une obsession : la **satisfaction du client**.<br /> Pour moi, un projet se gère comme une tournée :<br /> une préparation **organisée et méticuleuse** pour une exécution fluide et sans détours.<br /> Le code n'est qu'un **outil**.<br /> Ce qui compte pour moi? **fédérer une équipe**, **résoudre des problèmes**, **apprendre**, **découvrir**.",
+      "Ancien facteur reconverti par **passion**, aujourd'hui **responsable technique** en alternance (Mastère MCSI), j'ai gardé une obsession : la **satisfaction du client**.<br /> Pour moi, un projet se gère comme une tournée :<br /> une préparation **organisée et méticuleuse** pour une exécution fluide et sans détours.<br /> Le code n'est qu'un **outil**.<br /> Ce qui compte pour moi? **fédérer une équipe**, **résoudre des problèmes**, **apprendre**, **découvrir**.",
     "hero.downloadCv": "Télécharger le CV",
 
     "contact.email": "Email",
@@ -15,9 +15,9 @@ export const hero = {
     "contact.linkedin": "LinkedIn",
   },
   en: {
-    "hero.role": "Tech Lead",
+    "hero.role": "Technical Lead",
     "hero.description":
-      "Former postman turned **Tech Lead** by **passion**, I've kept one obsession: **customer satisfaction**.<br /> To me, a project is managed like a delivery route:<br /> an **organized and meticulous** preparation for a smooth execution with no detours.<br /> Code is just a **tool**.<br /> What truly matters to me? **leading a team**, **solving problems**, **learning**, **discovering**.",
+      "Former postman turned **Technical Lead** by **passion** (work-study, MCSI Master's), I've kept one obsession: **customer satisfaction**.<br /> To me, a project is managed like a delivery route:<br /> an **organized and meticulous** preparation for a smooth execution with no detours.<br /> Code is just a **tool**.<br /> What truly matters to me? **leading a team**, **solving problems**, **learning**, **discovering**.",
     "hero.downloadCv": "Download CV",
 
     "contact.email": "Email",

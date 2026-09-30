@@ -1,9 +1,21 @@
 export const education = [
   {
+    institution: "education.mcsi.institution",
+    location: "Paris (75)",
+    degree: "education.mcsi.degree",
+    period: "2026 - Présent",
+    url: "https://www.esgi.fr",
+    achievements: [
+      "education.mcsi.achievements.1",
+      "education.mcsi.achievements.2",
+      "education.mcsi.achievements.3",
+    ],
+  },
+  {
     institution: "education.miaw.institution",
     location: "Evry (91)",
     degree: "education.miaw.degree",
-    period: "2025 - Présent",
+    period: "2025 - 2026",
     url: "https://www.iut-evry.fr/nos-formations/lp/lp-metiers-de-linformatique-applications-web/",
     pdfPath: "/plaquette-miaw.pdf",
     achievements: [

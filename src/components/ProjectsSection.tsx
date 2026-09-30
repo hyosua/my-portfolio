@@ -136,6 +136,7 @@ export default function ProjectsSection({
                   </CardContent>
 
                   <CardFooter className="flex gap-6 items-center border-t border-border/40 bg-primary/5 py-4">
+                    {project.github && (
                     <motion.a
                       href={project.github}
                       onClick={handleLinkClick}
@@ -150,6 +151,7 @@ export default function ProjectsSection({
                       />
                       {t("projects.viewOnGithub")}
                     </motion.a>
+                    )}
 
                     {project.website && (
                       <motion.a
@@ -190,6 +192,7 @@ export default function ProjectsSection({
       
       {/* SECTION VIDÉO */}
       <div className="lg:sticky lg:top-0 h-fit">
+        {selectedProject.videoDesktop ? (
         <video
           key={selectedProject.title}
           controls
@@ -203,6 +206,13 @@ export default function ProjectsSection({
           <source src={selectedProject.videoMobile} type="video/webm" media="(max-width: 768px)" />
           <source src={selectedProject.videoDesktop} type="video/webm" />
         </video>
+        ) : (
+          <img
+            src={selectedProject.image}
+            alt={t(selectedProject.title)}
+            className="w-full max-h-[50vh] object-cover object-top lg:max-h-full rounded-lg shadow-lg"
+          />
+        )}
       </div>
 
       {/* SECTION INFOS*/}

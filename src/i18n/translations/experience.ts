@@ -3,15 +3,27 @@ export const experience = {
     "experience.achievements": "Réalisations Clés",
 
     // Trinexta
-    "work.trinexta.position": "Tech Lead",
+    "work.trinextaApp.position": "Apprenti Responsable Technique",
+    "work.trinextaApp.achievements.1":
+      "**Responsable technique** du pôle développement (4 développeurs) : architecture, qualité, livraison",
+    "work.trinextaApp.achievements.2":
+      "**Encadrement** de juniors, **audits** et **cadrage** client",
+    "work.trinextaApp.achievements.3":
+      "Alternance en **Mastère Management et Conseil en SI** (ESGI)",
+
+    "work.trinexta.position": "Lead Développeur (stage)",
     "work.trinexta.achievements.1":
-      "**Architecture** et choix techniques de la plateforme",
+      "**Structuration du pôle dev** (4 développeurs) : workflow Git, PR obligatoires, revue de code (400 PR en 3 mois)",
     "work.trinexta.achievements.2":
-      "**Encadrement** et montée en compétences de l'équipe de développement",
+      "**Pilotage Kanban** sur GitHub Projects : priorités, estimations, tickets cadrés selon le niveau de chacun",
     "work.trinexta.achievements.3":
-      "Mise en place des **bonnes pratiques** (code review, CI/CD, tests automatisés)",
+      "**CI/CD** GitHub Actions, tests, pre-commit : environ 550 déploiements aboutis, rollback documenté",
     "work.trinexta.achievements.4":
-      "**Pilotage de la delivery** et coordination avec les équipes produit",
+      "**Monitoring** et alertes webhook vers Teams, runbooks d'incident",
+    "work.trinexta.achievements.5":
+      "**Gouvernance de l'IA** : règles d'usage (AGENTS.md), « comprendre avant d'accepter », reprise d'une base de 78 000 lignes largement générée par IA",
+    "work.trinexta.achievements.6":
+      "**Livraisons** : refonte trinexta.fr (LCP quasi divisé par 2), plateforme RH, e-commerce client, audits SEO",
 
     // La Poste
     "work.laposte.position": "Facteur Service Expert",
@@ -52,15 +64,27 @@ export const experience = {
     "experience.achievements": "Key Achievements",
 
     // Trinexta
-    "work.trinexta.position": "Tech Lead",
+    "work.trinextaApp.position": "Technical Lead Apprentice",
+    "work.trinextaApp.achievements.1":
+      "**Technical lead** of the development team (4 developers): architecture, quality, delivery",
+    "work.trinextaApp.achievements.2":
+      "**Mentoring** juniors, client **audits** and **scoping**",
+    "work.trinextaApp.achievements.3":
+      "Work-study **Master's in Management and Consulting in IS** (ESGI)",
+
+    "work.trinexta.position": "Lead Developer (internship)",
     "work.trinexta.achievements.1":
-      "**Architecture** and technical decision-making for the platform",
+      "**Built the dev team's structure** (4 developers): Git workflow, mandatory PRs, code review (400 PRs in 3 months)",
     "work.trinexta.achievements.2":
-      "**Team management** and developer skill development",
+      "**Kanban management** on GitHub Projects: priorities, estimates, tickets scoped to each developer's level",
     "work.trinexta.achievements.3":
-      "Implementation of **best practices** (code review, CI/CD, automated testing)",
+      "**CI/CD** with GitHub Actions, tests, pre-commit: around 550 successful deployments, documented rollback",
     "work.trinexta.achievements.4":
-      "**Delivery management** and coordination with product teams",
+      "**Monitoring** and webhook alerts to Teams, incident runbooks",
+    "work.trinexta.achievements.5":
+      "**AI governance**: usage rules (AGENTS.md), \"understand before accepting\", takeover of a 78,000-line codebase largely AI-generated",
+    "work.trinexta.achievements.6":
+      "**Deliveries**: trinexta.fr rebuild (LCP nearly halved), HR platform, client e-commerce, SEO audits",
 
     // La Poste
     "work.laposte.position": "Expert Service Mail Carrier",

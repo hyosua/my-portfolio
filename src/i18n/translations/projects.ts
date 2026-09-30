@@ -13,6 +13,42 @@ export const projects = {
     "projects.viewOnGithub": "Voir sur GitHub",
     "projects.visitWebsite": "Visiter le site",
 
+    // Trinexta
+    "projects.trinexta.title": "trinexta.fr",
+    "projects.trinexta.description.1":
+      "**Refonte du site institutionnel** d'une société de services numériques : passage de WordPress à une application sur mesure, avec migration SEO.",
+    "projects.trinexta.description.2": "Next.js, Sanity, PostgreSQL, Prisma",
+    "projects.trinexta.context":
+      "**Refonte complète** du site de Trinexta (WordPress vers Next.js), mise en ligne en juin 2026. Le site est l'outil d'acquisition de l'entreprise : formulaire, prise de rendez-vous, tunnel d'estimation. Réalisé en équipe, sous ma responsabilité technique.",
+    "projects.trinexta.stack.1":
+      "**Next.js / TypeScript**: rendu côté serveur pour le référencement et les performances",
+    "projects.trinexta.stack.2":
+      "**Sanity**: CMS permettant à l'équipe d'éditer les contenus sans toucher au code",
+    "projects.trinexta.stack.3":
+      "**PostgreSQL / Prisma**: données applicatives du site",
+    "projects.trinexta.stack.4":
+      "**GitHub Actions / VPS OVH**: déploiement continu et hébergement en France",
+    "projects.trinexta.achievements.1":
+      "**Migration SEO** : inventaire pré-migration, redirections 301, sitemap, données structurées JSON-LD",
+    "projects.trinexta.achievements.2":
+      "**Design system** et durcissement des en-têtes HTTP",
+    "projects.trinexta.achievements.3":
+      "**Tunnel d'estimation** assisté par IA et prise de rendez-vous Microsoft Bookings",
+    "projects.trinexta.achievements.4":
+      "Audit **SEO, performance et accessibilité** et corrections (LCP de la home quasi divisé par 2)",
+    "projects.trinexta.challenges.1":
+      "Migrer un site **d'un domaine à un autre** sans perdre le référencement",
+    "projects.trinexta.challenges.2":
+      "Tenir la **mise en production** tout en structurant la revue de code et la CI/CD",
+    "projects.trinexta.challenges.3":
+      "**Cadrer l'usage de l'IA** dans l'équipe : revue systématique du code généré",
+    "projects.trinexta.results.1":
+      "Site en ligne et **maintenable en interne**, sans prestataire pour chaque évolution",
+    "projects.trinexta.results.2":
+      "**Vitrine** de l'offre de développement web de l'entreprise",
+    "projects.trinexta.results.3":
+      "Enseignement : la **vérification** compte autant que la production de code",
+
     // Hellmet
     "projects.hellmet.title": "Hellmet",
     "projects.hellmet.description.1":
@@ -241,6 +277,42 @@ export const projects = {
     "projects.scroll_more": "Scroll to learn more",
     "projects.viewOnGithub": "View on GitHub",
     "projects.visitWebsite": "Visit website",
+
+    // Trinexta
+    "projects.trinexta.title": "trinexta.fr",
+    "projects.trinexta.description.1":
+      "**Rebuild of the corporate website** of a digital services company: from WordPress to a custom application, with SEO migration.",
+    "projects.trinexta.description.2": "Next.js, Sanity, PostgreSQL, Prisma",
+    "projects.trinexta.context":
+      "**Full rebuild** of the Trinexta website (WordPress to Next.js), live since June 2026. The site is the company's acquisition tool: contact form, appointment booking, estimate funnel. Built as a team, under my technical responsibility.",
+    "projects.trinexta.stack.1":
+      "**Next.js / TypeScript**: server-side rendering for SEO and performance",
+    "projects.trinexta.stack.2":
+      "**Sanity**: CMS letting the team edit content without touching code",
+    "projects.trinexta.stack.3":
+      "**PostgreSQL / Prisma**: application data",
+    "projects.trinexta.stack.4":
+      "**GitHub Actions / OVH VPS**: continuous deployment and hosting in France",
+    "projects.trinexta.achievements.1":
+      "**SEO migration**: pre-migration inventory, 301 redirects, sitemap, JSON-LD structured data",
+    "projects.trinexta.achievements.2":
+      "**Design system** and HTTP security headers hardening",
+    "projects.trinexta.achievements.3":
+      "AI-assisted **estimate funnel** and Microsoft Bookings appointment scheduling",
+    "projects.trinexta.achievements.4":
+      "**SEO, performance and accessibility** audit and fixes (homepage LCP nearly halved)",
+    "projects.trinexta.challenges.1":
+      "Migrating a site **from one domain to another** without losing search ranking",
+    "projects.trinexta.challenges.2":
+      "Holding the **go-live** while building code review and CI/CD",
+    "projects.trinexta.challenges.3":
+      "**Framing AI use** in the team: systematic review of generated code",
+    "projects.trinexta.results.1":
+      "Site live and **maintainable in-house**, no contractor needed for each change",
+    "projects.trinexta.results.2":
+      "**Showcase** for the company's web development offer",
+    "projects.trinexta.results.3":
+      "Lesson: **verification** matters as much as producing code",
 
     // Hellmet
     "projects.hellmet.title": "hellmet",

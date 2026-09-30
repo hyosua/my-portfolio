@@ -4,6 +4,17 @@ export const education = {
     "education.visitWebsite": "Visiter le site web",
     "education.viewProgram": "Voir les détails du programme",
 
+    // Mastère MCSI – ESGI
+    "education.mcsi.institution": "ESGI Paris",
+    "education.mcsi.degree":
+      "Mastère Management et Conseil en Systèmes d'Information (alternance)",
+    "education.mcsi.achievements.1":
+      "**Gestion de projet**, méthodes **agiles** (Scrum, Kanban), conduite du changement",
+    "education.mcsi.achievements.2":
+      "Cadrage et modélisation (**BPM**, **UML**), MOA / MOE, **audit** et **sécurité** du SI",
+    "education.mcsi.achievements.3":
+      "Coût et valeur du SI (**ROI**), **DevOps**, cloud, Kubernetes, Terraform (électifs)",
+
     // LP MIAW – Université d'Évry
     "education.miaw.institution": "Université d'Évry Val d'Essonne",
     "education.miaw.degree": "LP MIAW - Métiers de l'Informatique Application Web",
@@ -28,6 +39,17 @@ export const education = {
     "education.achievements": "Achievements & Activities",
     "education.visitWebsite": "Visit website",
     "education.viewProgram": "View program details",
+
+    // MCSI Master's – ESGI
+    "education.mcsi.institution": "ESGI Paris",
+    "education.mcsi.degree":
+      "Master's in Management and Consulting in Information Systems (work-study)",
+    "education.mcsi.achievements.1":
+      "**Project management**, **agile** methods (Scrum, Kanban), change management",
+    "education.mcsi.achievements.2":
+      "Scoping and modelling (**BPM**, **UML**), MOA / MOE, IS **audit** and **security**",
+    "education.mcsi.achievements.3":
+      "IS cost and value (**ROI**), **DevOps**, cloud, Kubernetes, Terraform (electives)",
 
     // LP MIAW – University of Évry
     "education.miaw.institution": "University of Évry Val d'Essonne",
